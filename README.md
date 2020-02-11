@@ -2,7 +2,7 @@
 
 # Git hub link
 ```
-https://github.com/ZainabKamel/NGS_project
+https://github.com/ZainabKamel/NGS2-Project
 ```
 # Code file
 ```
