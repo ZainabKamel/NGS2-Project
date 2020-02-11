@@ -1,6 +1,6 @@
 # NGS2-Project
 
-# Git hub link
+# GitHub link
 ```
 https://github.com/ZainabKamel/NGS2-Project
 ```
@@ -8,8 +8,8 @@ https://github.com/ZainabKamel/NGS2-Project
 ```
 for the code open Steps file
 ```
-# Differential Expression  
+# Data Download
 ```
-# Data Downloading   
 1. Sample Data 
 2. Control Data 
+```
