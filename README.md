@@ -21,5 +21,7 @@ we have checked the QC of all data we have downloaded and obtained a merged repo
 you can find the report uploaded with the name multiqc_report.html
 
 ### Analysis of report: 
-we found duplicates and issues with per base sequence  (warning appeared because lower quartile for bases was less than 10) so we trimmed data 
-```
+we found issues with "per base sequence"  (warning appeared because lower quartile for bases was less than 10) and issues with "duplicates levels" (warning appeared because non-unique sequences make up more than 20% of total) so we trimmed data 
+
+# Data trimming 
+
