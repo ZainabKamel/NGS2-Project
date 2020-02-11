@@ -1,5 +1,3 @@
-# Conversion of GTF to Bed file 
-
 ## Install [bioconda](https://docs.conda.io/en/latest/miniconda.html) if you don't have it already
 
 ```
