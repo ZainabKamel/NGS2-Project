@@ -15,3 +15,6 @@ for the code open Script file
 The links of SRA are available in script 
 ```
 # QC for data
+```
+we have checked the QC of all data we have downloaded and obtained a merged report for them. 
+you can find the report uploaded with the name multiqc_report.html
