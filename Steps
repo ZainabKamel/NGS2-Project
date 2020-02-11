@@ -24,4 +24,7 @@ wget https://sra-download.ncbi.nlm.nih.gov/traces/sra46/SRZ/010958/SRR10958001/h
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/010958/SRR10958009/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz
 
 # Sample Data 
-wget 
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra54/SRZ/010958/SRR10958000/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz
+wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/010958/SRR10958005/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz
+
+
