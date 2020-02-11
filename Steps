@@ -10,15 +10,15 @@ conda config --add channels bioconda
 ```
 
 ## create a new enviornment
-
 ```
 conda create -y --name ngs2_project python=3.6
+conda activate ngs2_project
 ```
-## Differential espression 
+
+## Data preparation 
 ```
-# Data preparation 
 ### Download
-mkdir -p ~/project2/diff_exp && cd ~/project2/diff_exp/
+mkdir -p ~/project2/sample_data && cd ~/project2/sample_data/
 # Control Data
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra46/SRZ/010958/SRR10958001/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/010958/SRR10958009/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz
@@ -26,5 +26,14 @@ wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/010958/SRR10958009/h
 # Sample Data 
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra54/SRZ/010958/SRR10958000/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/010958/SRR10958005/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz
+```
+
+## FastQC 
+```
+#Installing Software 
+conda install -c bioconda fastqc 
+conda install -c bioconda multiqc 
+
+mkdir -p ~/project2/fastaQC && cd ~/project2/fastaQC/
 
 
