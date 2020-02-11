@@ -1,1 +1,19 @@
+# Conversion of GTF to Bed file 
+
+## Install [bioconda](https://docs.conda.io/en/latest/miniconda.html) if you don't have it already
+
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+## restart the terminal
+conda config --add channels r
+conda config --add channels conda-forge
+conda config --add channels bioconda
+```
+
+## create a new enviornment
+
+```
+conda create -y --name ngs2_project python=3.6
+```
 
