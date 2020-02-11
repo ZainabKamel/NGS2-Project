@@ -44,12 +44,12 @@ mv ../sample_data/*zip ./
 multiqc -z -o . .
 ```
 #Data Trimming 
-f1="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz"
-f2="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz"
+f1="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz"
+f2="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz"
 f3="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz"
 f4="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz"
-newf1="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep1.trim.fastq.gz"
-newf2="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep2.trim.fastq.gz"
+newf1="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep1.trim.fastq.gz"
+newf2="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep2.trim.fastq.gz"
 newf3="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep1.trim.fastq.gz"
 newf4="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep2.trim.fastq.gz"
 newf1U="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep1.trimU.fastq.gz"
