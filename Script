@@ -70,6 +70,10 @@ ILLUMINACLIP:$adap/TruSeq3-PE.fa:2:30:10:1 SLIDINGWINDOW:4:15 MINLEN:36
 
 ## Differential Expression 
 ```
+#Preparation of GTF file
+first we used gt gff3_to_gtf Homo_sapiens.GRCh38.99.chromosome.6.gff > Homo_sapiens.GRCh38.99.chromosome.6.gtf #but unfortunately it showed at GTF2.2 version which only has transcript and exon ids which we cannot use for feature count 
+gffread Homo_sapiens.GRCh38.99.chromosome.6.gff3 -T -o Homo_sapiens.GRCh38.99.chromosome.6.gtf
+
 #INDEXING
 mkdir -p ~/PROJECT/hisat_align/hisatIndex && cd ~/PROJECT/hisat_align/hisatIndex
 ln -s ~/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.6.fa .
