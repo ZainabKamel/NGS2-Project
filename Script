@@ -75,25 +75,25 @@ first we used gt gff3_to_gtf Homo_sapiens.GRCh38.99.chromosome.6.gff > Homo_sapi
 gffread Homo_sapiens.GRCh38.99.chromosome.6.gff3 -T -o Homo_sapiens.GRCh38.99.chromosome.6.gtf
 
 #INDEXING
-mkdir -p ~/PROJECT/hisat_align/hisatIndex && cd ~/PROJECT/hisat_align/hisatIndex
-ln -s ~/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.6.fa .
-hisat2_extract_splice_sites.py ~/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > splicesites.tsv
-hisat2_extract_exons.py ~/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > exons.tsv
+mkdir -p ~/PROJECT/Hisat/hisat_align/hisatIndex && cd ~/PROJECT/Hisat/hisat_align/hisatIndex
+ln -s ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.6.fa .
+hisat2_extract_splice_sites.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > splicesites.tsv
+hisat2_extract_exons.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > exons.tsv
 hisat2-build -p 1 --ss splicesites.tsv --exon exons.tsv Homo_sapiens.GRCh38.dna.chromosome.6.fa Homo_sapiens.GRCh38
 
 #ALIGNMENT
-cd ~/PROJECT/hisat_align/
+cd ~/Desktop/PROJECT/Hisat/hisat_align/
 newfile="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz"
-hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F $newfile -S hs_T47D_shNR2F2_RNAseq_rep1.sam
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile -S hs_T47D_shNR2F2_RNAseq_rep1.sam
 
 newfile1="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz"
-hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F $newfile -S hs_T47D_shNR2F2_RNAseq_rep2.sam
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile1 -S hs_T47D_shNR2F2_RNAseq_rep2.sam
 
 newfile2="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz"
-hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F $newfile -S hs_T47D_shCTRL_RNAseq_rep1.sam
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile2 -S hs_T47D_shCTRL_RNAseq_rep1.sam
 
 newfile3="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz"
-hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F $newfile -S hs_T47D_shCTRL_RNAseq_rep2.sam
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile3 -S hs_T47D_shCTRL_RNAseq_rep2.sam
 
 
 
