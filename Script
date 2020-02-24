@@ -58,3 +58,14 @@ newf3U="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep1.trimU.fastq.gz"
 newf4U="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep2.trimU.fastq.gz"
 trimmomatic PE -threads 1 -phred33 -trimlog trimLogFile -summary statsSummaryFile  $f1 $f2 $f3 $f4 $newf1 $newf1U $newf2 $newf2U $newf3 $newf3U $newf4 $newf4U \
 ILLUMINACLIP:$adap/TruSeq3-PE.fa:2:30:10:1 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+
+## Differential Expression 
+```
+#INDEXING
+mkdir -p ~/PROJECT/hisat_align/hisatIndex && cd ~/PROJECT/hisat_align/hisatIndex
+ln -s ~/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.6.fa .
+hisat2_extract_splice_sites.py ~/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > splicesites.tsv
+hisat2_extract_exons.py ~/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > exons.tsv
+hisat2-build -p 1 --ss splicesites.tsv --exon exons.tsv Homo_sapiens.GRCh38.dna.chromosome.6.fa Homo_sapiens.GRCh38
