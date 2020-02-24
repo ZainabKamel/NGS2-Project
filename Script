@@ -11,14 +11,14 @@ conda config --add channels bioconda
 
 ## create a new enviornment
 ```
-conda create -y --name ngs2_project python=3.6
-conda activate ngs2_project
+conda create -y --name ngs2 python=3.6
+conda activate ngs2
 ```
 
 ## Data preparation 
 ```
 ### Download
-mkdir -p ~/project2/sample_data && cd ~/project2/sample_data/
+mkdir -p ~/Desktop/PROJECT/SAMPLE_DATA && cd ~/Desktop/PROJECT/SAMPLE_DATA
 # Control Data
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra46/SRZ/010958/SRR10958001/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/010958/SRR10958009/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz
@@ -69,3 +69,22 @@ ln -s ~/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.6.fa .
 hisat2_extract_splice_sites.py ~/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > splicesites.tsv
 hisat2_extract_exons.py ~/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > exons.tsv
 hisat2-build -p 1 --ss splicesites.tsv --exon exons.tsv Homo_sapiens.GRCh38.dna.chromosome.6.fa Homo_sapiens.GRCh38
+
+#ALIGNMENT
+cd ~/PROJECT/hisat_align/
+newfile="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz"
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F $newfile -S hs_T47D_shNR2F2_RNAseq_rep1.sam
+
+newfile1="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz"
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F $newfile -S hs_T47D_shNR2F2_RNAseq_rep2.sam
+
+newfile2="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz"
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F $newfile -S hs_T47D_shCTRL_RNAseq_rep1.sam
+
+newfile3="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz"
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F $newfile -S hs_T47D_shCTRL_RNAseq_rep2.sam
+
+
+
+
+
