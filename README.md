@@ -27,6 +27,11 @@ we found issues with "per base sequence"  (warning appeared because lower quarti
 
 # Data trimming 
 
+# Indexing 
+```
+preparation of annotation file of chromosome 6 from GFF3 to GTF 
+we used genometools first which shows a GTF2.2 having no gene id, only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
+```
 # Alignment 
 ```
 we aligned data using Hisat and these were the output of the four files (two samples and two controls)
