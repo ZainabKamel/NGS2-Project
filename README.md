@@ -11,7 +11,9 @@ for the code open Script file
 # Data Download
 ```
 1. Sample Data 
-2. Control Data 
+2. Control Data
+3. Human Chromosome 6 "REFERENCE in fasta format"
+4. Annotation file of chromosome 6 "GFF3 format" 
 The links of SRA are available in script 
 ```
 # QC for data
