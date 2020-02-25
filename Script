@@ -74,14 +74,14 @@ ILLUMINACLIP:$adap/TruSeq3-PE.fa:2:30:10:1 SLIDINGWINDOW:4:15 MINLEN:36
 first we used gt gff3_to_gtf Homo_sapiens.GRCh38.99.chromosome.6.gff > Homo_sapiens.GRCh38.99.chromosome.6.gtf #but unfortunately it showed at GTF2.2 version which only has transcript and exon ids which we cannot use for feature count 
 gffread Homo_sapiens.GRCh38.99.chromosome.6.gff3 -T -o Homo_sapiens.GRCh38.99.chromosome.6.gtf
 
-#INDEXING
+# INDEXING
 mkdir -p ~/PROJECT/Hisat/hisat_align/hisatIndex && cd ~/PROJECT/Hisat/hisat_align/hisatIndex
 ln -s ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.6.fa .
 hisat2_extract_splice_sites.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > splicesites.tsv
 hisat2_extract_exons.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > exons.tsv
 hisat2-build -p 1 --ss splicesites.tsv --exon exons.tsv Homo_sapiens.GRCh38.dna.chromosome.6.fa Homo_sapiens.GRCh38
 
-#ALIGNMENT
+# ALIGNMENT
 cd ~/Desktop/PROJECT/Hisat/hisat_align/
 newfile="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz"
 hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile -S hs_T47D_shNR2F2_RNAseq_rep1.sam
@@ -94,6 +94,19 @@ hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfi
 
 newfile3="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz"
 hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile3 -S hs_T47D_shCTRL_RNAseq_rep2.sam
+
+# Preparing SAM/BAM/SORTED_BAM files
+#convert SAM file to BAM file
+samtools view -bS hs_T47D_shCTRL_RNAseq_rep1.sam > hs_T47D_shCTRL_RNAseq_rep1.bam
+samtools view -bS hs_T47D_shCTRL_RNAseq_rep2.sam > hs_T47D_shCTRL_RNAseq_rep2.bam
+samtools view -bS hs_T47D_shNR2F2_RNAseq_rep1.sam > hs_T47D_shNR2F2_RNAseq_rep1.bam
+samtools view -bS hs_T47D_shNR2F2_RNAseq_rep2.sam > hs_T47D_shNR2F2_RNAseq_rep2.bam
+
+#convert the BAM file to a sorted BAM file
+samtools sort hs_T47D_shCTRL_RNAseq_rep1.bam -o hs_T47D_shCTRL_RNAseq_rep1.sorted.bam
+samtools sort hs_T47D_shCTRL_RNAseq_rep2.bam -o hs_T47D_shCTRL_RNAseq_rep2.sorted.bam
+samtools sort  hs_T47D_shNR2F2_RNAseq_rep1.bam -o hs_T47D_shNR2F2_RNAseq_rep1.sorted.bam
+samtools sort  hs_T47D_shNR2F2_RNAseq_rep2.bam -o hs_T47D_shNR2F2_RNAseq_rep2.sorted.bam
 
 
 
