@@ -77,9 +77,7 @@ The ESR1 gene we are looking for appeared to be on Forward strand, that's why we
 
 # Quantification
 Counting the originated file (simple_count.txt attached above)
-| Geneid        |hs_T47D_shCTRL_RNAseq_rep1.bam|hs_T47D_shCTRL_RNAseq_rep1.sorted.bam|hs_T47D_shCTRL_RNAseq_rep2.bam|hs_T47D_shCTRL_RNAseq_rep2.sorted.bam|
-
-
+| Geneid        |hs_T47D_shCTRL_RNAseq_rep1.bam|
 | ------------- | ------------- |
 |ENSG00000271530| Content Cell  |
 |ENSG00000220212| Content Cell  |
