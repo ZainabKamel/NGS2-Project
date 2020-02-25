@@ -70,9 +70,6 @@ The ESR1 gene we are looking for appeared to be on Forward strand, that's why we
     598585 (7.33%) aligned exactly 1 time
     21870 (0.27%) aligned >1 times
 7.60% overall alignment rate
-
-
-
 ```
 
 # Quantification
@@ -90,7 +87,7 @@ Counting the originated file (simple_count.txt attached above)
 
 | Geneid     |hs_T47D_shCTRL_RNAseq_rep1.bam | hs_T47D_shCTRL_RNAseq_rep1.sorted.bam |hs_T47D_shCTRL_RNAseq_rep2.bam
 |hs_T47D_shCTRL_RNAseq_rep2.sorted.bam | hs_T47D_shNR2F2_RNAseq_rep1.bam |hs_T47D_shNR2F2_RNAseq_rep1.sorted.bam| 
-|------------|---------------|---------------|---------------|---------------|---------------|---------------| 
+|-------        |  -------|---------------|---------------|---------------|---------------|---------------| 
 |ENSG00000271530| 0       | 3170          | 3038          | 3488          | 2202          | 2680          | 
 |ENSG00000220212| 0       | 1078          | 996           | 9200          | 6678          | 7396          | 
 |ENSG00000217929| 195     | 778           | 708           | 1384          | 954           | 1108          | 
