@@ -26,18 +26,18 @@ you can find the report uploaded with the name multiqc_report.html
 we found issues with "per base sequence"  (warning appeared because lower quartile for bases was less than 10) and issues with "duplicates levels" (warning appeared because non-unique sequences make up more than 20% of total) so we trimmed data 
 
 # Data trimming 
-### Hisat Alignment
-# Indexing 
+# Hisat Alignment
+## Indexing 
 ```
 preparation of annotation file of chromosome 6 from GFF3 to GTF 
 we used genometools first which shows a GTF2.2 having no gene id, only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
 ```
-# Alignment 
+## Alignment 
 ```
 we aligned data using Hisat and these were the output of the four files (two samples and two controls)
 The ESR1 gene we are looking for appeared to be on Forward strand, that's why we focused on F in the command line 
 ```
-# Alignment Summary
+## Alignment Summary
 ```
 ## Control REP1 hs_REP1_T47D_shCTRL_RNAseq
 23830798 reads; of these:
@@ -71,8 +71,8 @@ The ESR1 gene we are looking for appeared to be on Forward strand, that's why we
     21870 (0.27%) aligned >1 times
 7.60% overall alignment rate
 ```
-### Differential Expression
-# Quantification
+# Differential Expression
+## Quantification
 Counting the originated file (simple_count.txt attached above)
 | Geneid        |hs_T47D_shCTRL_RNAseq_rep1.bam|hs_T47D_shCTRL_RNAseq_rep1.sorted.bam|
 | ------------- | ------------- |-------------|
