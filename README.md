@@ -74,15 +74,6 @@ The ESR1 gene we are looking for appeared to be on Forward strand, that's why we
 
 
 ```
-0
-0
-195
-0
-0
-0
-0
-5
-
 
 # Quantification
 Counting the originated file (simple_count.txt attached above)
@@ -96,3 +87,14 @@ Counting the originated file (simple_count.txt attached above)
 |ENSG00000285578|0  |0|
 |ENSG00000205653|0  |0|
 |ENSG00000287265|5  |5|
+
+| Geneid     |hs_T47D_shCTRL_RNAseq_rep1.bam | hs_T47D_shCTRL_RNAseq_rep1.sorted.bam | bam/HBR_3.bam | bam/UHR_1.bam | bam/UHR_2.bam | bam/UHR_3.bam | 
+|------------|---------------|---------------|---------------|---------------|---------------|---------------| 
+|ENSG00000271530| 0       | 3170          | 3038          | 3488          | 2202          | 2680          | 
+|ENSG00000220212| 0        | 1078          | 996           | 9200          | 6678          | 7396          | 
+|ENSG00000217929| 195           | 778           | 708           | 1384          | 954           | 1108          | 
+|ENSG00000218577| 0            | 0             | 0             | 2             | 0             | 0             | 
+|ENSG00000263667| 0             | 0             | 0             | 4             | 4             | 0             | 
+|ENSG00000285578| 0            | 20            | 8             | 20            | 4             | 16            | 
+|ENSG00000205653| 0             | 0             | 0             | 0             | 0             | 0             | 
+|ENSG00000287265| 0             | 0             | 0             | 0             | 0             | 2             | 
