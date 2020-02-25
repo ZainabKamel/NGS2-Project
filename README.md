@@ -37,6 +37,8 @@ we used genometools first which shows a GTF2.2 having no gene id, only transcrip
 we aligned data using Hisat and these were the output of the four files (two samples and two controls)
 The ESR1 gene we are looking for appeared to be on Forward strand, that's why we focused on F in the command line 
 ```
+# Alignment Summary
+```
 ## Control REP1 hs_REP1_T47D_shCTRL_RNAseq
 23830798 reads; of these:
   23830798 (100.00%) were unpaired; of these:
@@ -68,3 +70,4 @@ The ESR1 gene we are looking for appeared to be on Forward strand, that's why we
     598585 (7.33%) aligned exactly 1 time
     21870 (0.27%) aligned >1 times
 7.60% overall alignment rate
+```
