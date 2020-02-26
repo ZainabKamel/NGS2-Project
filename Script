@@ -61,7 +61,7 @@ gt gff3_to_gtf Homo_sapiens.GRCh38.99.chromosome.6.gff > Homo_sapiens.GRCh38.99.
 #so we switched to using 
 gffread Homo_sapiens.GRCh38.99.chromosome.6.gff3 -T -o Homo_sapiens.GRCh38.99.chromosome.6.gtf
 
-UNTRIMEED DATA
+UNTRIMMED DATA
 # INDEXING
 mkdir -p ~/PROJECT/Hisat/hisat_align/hisatIndex && cd ~/PROJECT/Hisat/hisat_align/hisatIndex
 ln -s ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.6.fa .
