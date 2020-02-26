@@ -29,13 +29,17 @@ we found issues with "per base sequence"  (warning appeared because lower quarti
 # Hisat Alignment
 ## Indexing 
 ```
+We first worked on chromosome 6, because we were tracking ESR-1 gene on chr 6 but after reviewing the main abstract of the study we figured out we need to work on chr 15 where NR2F2 is located. 
+
 preparation of annotation file of chromosome 6 from GFF3 to GTF 
 we used genometools first which shows a GTF2.2 having no gene id, only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
 ```
 ## Alignment 
 ```
+At first, we failed to work using for loop so we aligned each sample alone, but after solving the issue of for loop we reused it for conducting the resullts "viewd in details in issue number 11"
+
 we aligned data using Hisat and these were the output of the four files (two samples and two controls)
-The ESR1 gene we are looking for appeared to be on Forward strand, that's why we focused on F in the command line 
+The NR2F2 gene we are looking for appeared to be on Forward strand, that's why we focused on F in the command line 
 ```
 ### Alignment Summary
 ```
