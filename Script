@@ -60,6 +60,7 @@ gt gff3_to_gtf Homo_sapiens.GRCh38.99.chromosome.6.gff > Homo_sapiens.GRCh38.99.
 #so we switched to using 
 gffread Homo_sapiens.GRCh38.99.chromosome.6.gff3 -T -o Homo_sapiens.GRCh38.99.chromosome.6.gtf
 
+UNTRIMEED DATA
 # INDEXING
 mkdir -p ~/PROJECT/Hisat/hisat_align/hisatIndex && cd ~/PROJECT/Hisat/hisat_align/hisatIndex
 ln -s ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.6.fa .
@@ -96,12 +97,12 @@ samtools sort  hs_T47D_shNR2F2_RNAseq_rep2.bam -o hs_T47D_shNR2F2_RNAseq_rep2.so
 
 Differential Expression
 # Quantification
-GTF=/home/zainabkamel/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf
+GTF=/home/zainabkamel/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.15.gtf
 featureCounts -a $GTF -g gene_id -o counts.txt  hs_T47D_shCTRL_RNAseq_rep*.bam  hs_T47D_shNR2F2_RNAseq_rep*.bam
-cat counts.txt | cut -f 1,7-14 > simple_counts.txt
+cat counts.txt | cut -f 1,7-12 > simple_counts.txt
 
 ## Analyze the counts with Deseq
-cat simple_counts.txt | Rscript deseq1.r 3x3 > results_deseq1.tsv
+cat simple_counts.txt | Rscript deseq1.r 2x2 > results_deseq1.tsv
 
 #View only rows with pval < 0.05
 
