@@ -34,11 +34,14 @@ we first worked on chromosome 6 because we thought we are working on ESR-1 but a
 preparation of annotation file of chromosome 15 from GFF3 to GTF 
 we used genometools first which shows a GTF2.2 having no gene id,
 only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
+
 ```
 ## Alignment 
 ```
 we aligned data using Hisat and these were the output of the four files (two samples and two controls)
-The ESR1 gene we are looking for appeared to be on Forward strand, that's why we focused on F in the command line 
+The NR2F2 gene we are looking for appeared to be on Forward strand, that's why we focused on F in the command line 
+
+After failure to use the for loop at first, we aligned each sample alone, but after this we solved the for loop issue using the GFF3 "you can view this on issues section no 11"
 ```
 ### Alignment Summary
 ```
