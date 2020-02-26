@@ -29,10 +29,11 @@ wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/010958/SRR10958005/h
 
 # Reference file
 wget ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.6.fa.gz
+wget ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.15.fa.gz
 
 # Annotation file
-ftp://ftp.ensembl.org/pub/release-99/gff3/homo_sapiens/Homo_sapiens.GRCh38.99.chromosome.6.gff3.gz
-
+wget ftp://ftp.ensembl.org/pub/release-99/gff3/homo_sapiens/Homo_sapiens.GRCh38.99.chromosome.6.gff3.gz
+wget ftp://ftp.ensembl.org/pub/release-99/gff3/homo_sapiens/Homo_sapiens.GRCh38.99.chromosome.15.gff3.gz
 ```
 
 ## Fastq Quality Check 
