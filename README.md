@@ -28,7 +28,7 @@ we found issues with "per base sequence"  (warning appeared because lower quarti
 
 # Data trimming 
 
-# Hisat Alignment for untrimned data 
+# Hisat Alignment for untrimmedd data 
 ## Indexing 
 ```
 We first worked on chromosome 6, because we were tracking ESR-1 gene on chr 6 but after reviewing the main abstract of the study we figured out we need to work on chr 15 where NR2F2 is located. 
