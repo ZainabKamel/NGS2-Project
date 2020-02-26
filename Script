@@ -51,20 +51,7 @@ mv ../sample_data/*zip ./
 multiqc -z -o . .
 ```
 #Data Trimming 
-f1="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz"
-f2="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz"
-f3="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz"
-f4="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz"
-newf1="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep1.trim.fastq.gz"
-newf2="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep2.trim.fastq.gz"
-newf3="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep1.trim.fastq.gz"
-newf4="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep2.trim.fastq.gz"
-newf1U="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep1.trimU.fastq.gz"
-newf2U="$HOME/project2/sample_data/hs_T47D_shNR2F2_RNAseq_rep2.trimU.fastq.gz"
-newf3U="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep1.trimU.fastq.gz"
-newf4U="$HOME/project2/sample_data/hs_T47D_shCTRL_RNAseq_rep2.trimU.fastq.gz"
-trimmomatic PE -threads 1 -phred33 -trimlog trimLogFile -summary statsSummaryFile  $f1 $f2 $f3 $f4 $newf1 $newf1U $newf2 $newf2U $newf3 $newf3U $newf4 $newf4U \
-ILLUMINACLIP:$adap/TruSeq3-PE.fa:2:30:10:1 SLIDINGWINDOW:4:15 MINLEN:36
+
 
 
 #Preparation of GTF file
@@ -111,7 +98,7 @@ Differential Expression
 # Quantification
 GTF=/home/zainabkamel/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf
 featureCounts -a $GTF -g gene_id -o counts.txt  hs_T47D_shCTRL_RNAseq_rep*.bam  hs_T47D_shNR2F2_RNAseq_rep*.bam
-cat counts.txt | cut -f 1,7-12 > simple_counts.txt
+cat counts.txt | cut -f 1,7-14 > simple_counts.txt
 
 ## Analyze the counts with Deseq
 cat simple_counts.txt | Rscript deseq1.r 3x3 > results_deseq1.tsv
