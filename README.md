@@ -81,13 +81,13 @@ The NR2F2 gene we are looking for appeared to be on Forward strand, that's why w
 Counting the originated file (simple_count.txt attached above)
 | Geneid        |hs_T47D_shCTRL_RNAseq_rep1.bam|hs_T47D_shCTRL_RNAseq_rep2.bam|hs_T47D_shNR2F2_RNAseq_rep1.bam|hs_T47D_shNR2F2_RNAseq_rep2.bam|
 | ------------- | ------------- |-------------|-------------|-------------|
-|ENSG00000271530| 0 |0|
-|ENSG00000220212| 0 |0|
-|ENSG00000217929|195|195|
-|ENSG00000218577|0  |0|
-|ENSG00000263667|0  |0|
-|ENSG00000285578|0  |0|
-|ENSG00000205653|0  |0|
-|ENSG00000287265|5  |5|
+|ENSG00000215567| 8 |4|5|2|
+|ENSG00000201241| 1 |1|1|0|
+|ENSG00000258463| 0 |0|1|0|
+|ENSG00000274347| 0 |0|0|0|
+|ENSG00000188403| 0 |0|0|0|
+|ENSG00000258706| 0 |0|0|0|
+|ENSG00000259337| 0 |0|0|0|
+
 
 
