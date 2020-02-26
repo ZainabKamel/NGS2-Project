@@ -80,7 +80,7 @@ The NR2F2 gene we are looking for appeared to be on Forward strand, that's why w
 ```
 # Differential Expression
 ## Quantification
-Counting the originated file (simple_count.txt attached above)
+### Counting the originated file (simple_count.txt attached above)
 | Geneid        |hs_T47D_shCTRL_RNAseq_rep1.bam|hs_T47D_shCTRL_RNAseq_rep2.bam|hs_T47D_shNR2F2_RNAseq_rep1.bam|hs_T47D_shNR2F2_RNAseq_rep2.bam|
 | ------------- | ------------- |-------------|-------------|-------------|
 |ENSG00000215567| 8 |4|5|2|
@@ -91,5 +91,11 @@ Counting the originated file (simple_count.txt attached above)
 |ENSG00000258706| 0 |0|0|0|
 |ENSG00000259337| 0 |0|0|0|
 
+### DESeq Output
 
-
+| id         | baseMean         | baseMeanA        | baseMeanB        | foldChange       | log2FoldChange   | pval                 | padj                 | 
+|------------|------------------|------------------|------------------|------------------|------------------|----------------------|----------------------| 
+| ERCC-00130 | 29681.8244237545 | 10455.9218232761 | 48907.7270242329 | 4.67751460376823 | 2.22574215774208 | 1.16729711209977e-88 | 9.10491747437823e-87 | 
+| ERCC-00108 | 808.597670575459 | 264.877838024487 | 1352.31750312643 | 5.10543846632202 | 2.35203486825767 | 2.40956154792562e-62 | 9.39729003690993e-61 | 
+| ERCC-00136 | 1898.3382995277  | 615.744918976546 | 3180.93168007886 | 5.16598932779828 | 2.36904466305553 | 2.80841619396469e-58 | 7.30188210430821e-57 | 
+| ERCC-00116 | 952.57953992746  | 337.704944218003 | 1567.45413563692 | 4.64149004174798 | 2.21458802318734 | 1.72224091670521e-45 | 3.35836978757517e-44 | 
