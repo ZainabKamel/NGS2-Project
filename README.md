@@ -18,14 +18,14 @@ The links of SRA and ensembl are available in script
 ```
 # QC for data
 ```
-```
 we have checked the QC of all data we have downloaded and obtained a merged report for them. 
 you can find the report uploaded with the name multiqc_report.html
-
+```
 ### Analysis of report: 
 we found issues with "per base sequence"  (warning appeared because lower quartile for bases was less than 10) and issues with "duplicates levels" (warning appeared because non-unique sequences make up more than 20% of total) so we trimmed data 
 
 # Data trimming 
+
 # Hisat Alignment
 ## Indexing 
 ```
