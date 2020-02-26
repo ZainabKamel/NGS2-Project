@@ -29,53 +29,48 @@ we found issues with "per base sequence"  (warning appeared because lower quarti
 # Hisat Alignment
 ## Indexing 
 ```
-we first worked on chromosome 6 because we thought we are working on ESR-1 but after re-checking the original abstract of the study, we figured out we need to work on chromosome 15 as it has the NR2F2 gene.
-
-preparation of annotation file of chromosome 15 from GFF3 to GTF 
-we used genometools first which shows a GTF2.2 having no gene id,
-only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
-
+preparation of annotation file of chromosome 6 from GFF3 to GTF 
+we used genometools first which shows a GTF2.2 having no gene id, only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
 ```
 ## Alignment 
 ```
 we aligned data using Hisat and these were the output of the four files (two samples and two controls)
-The NR2F2 gene we are looking for appeared to be on Forward strand, that's why we focused on F in the command line 
-
-After failure to use the for loop at first, we aligned each sample alone, but after this we solved the for loop issue using the GFF3 "you can view this on issues section no 11"
+The ESR1 gene we are looking for appeared to be on Forward strand, that's why we focused on F in the command line 
 ```
 ### Alignment Summary
 ```
 ## Control REP1 hs_REP1_T47D_shCTRL_RNAseq
 23830798 reads; of these:
   23830798 (100.00%) were unpaired; of these:
-    22173133 (93.04%) aligned 0 times
-    1534826 (6.44%) aligned exactly 1 time
-    122839 (0.52%) aligned >1 times
-6.96% overall alignment rate
+    22636860 (94.99%) aligned 0 times
+    1056038 (4.43%) aligned exactly 1 time
+    137900 (0.58%) aligned >1 times
+5.01% overall alignment rate
 
 ## Control REP2 hs_REP2_T47D_shCTRL_RNAseq
 28344397 reads; of these:
   28344397 (100.00%) were unpaired; of these:
-    26179388 (92.36%) aligned 0 times
-    2094683 (7.39%) aligned exactly 1 time
-    70326 (0.25%) aligned >1 times
-7.64% overall alignment rate
+    26884448 (94.85%) aligned 0 times
+    1377373 (4.86%) aligned exactly 1 time
+    82576 (0.29%) aligned >1 times
+5.15% overall alignment rate
 
 ## Sample REP1 hs_REP1_T47D_shNR2F2_RNAseq
 26758033 reads; of these:
   26758033 (100.00%) were unpaired; of these:
-    24732996 (92.43%) aligned 0 times
-    1951113 (7.29%) aligned exactly 1 time
-    73924 (0.28%) aligned >1 times
-7.57% overall alignment rate
+    25388901 (94.88%) aligned 0 times
+    1288608 (4.82%) aligned exactly 1 time
+    80524 (0.30%) aligned >1 times
+5.12% overall alignment rate
 
 ## Sample REP2 hs_REP2_T47D_shNR2F2_RNAseq
-8162158 reads; of these:
-  8162158 (100.00%) were unpaired; of these:
-    7541703 (92.40%) aligned 0 times
-    598585 (7.33%) aligned exactly 1 time
-    21870 (0.27%) aligned >1 times
-7.60% overall alignment rate
+29668645 reads; of these:
+  29668645 (100.00%) were unpaired; of these:
+    28147110 (94.87%) aligned 0 times
+    1435885 (4.84%) aligned exactly 1 time
+    85650 (0.29%) aligned >1 times
+5.13% overall alignment rate
+
 ```
 # Differential Expression
 ## Quantification
