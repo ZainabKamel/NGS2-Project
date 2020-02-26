@@ -29,8 +29,11 @@ we found issues with "per base sequence"  (warning appeared because lower quarti
 # Hisat Alignment
 ## Indexing 
 ```
-preparation of annotation file of chromosome 6 from GFF3 to GTF 
-we used genometools first which shows a GTF2.2 having no gene id, only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
+we first worked on chromosome 6 because we thought we are working on ESR-1 but after re-checking the original abstract of the study, we figured out we need to work on chromosome 15 as it has the NR2F2 gene.
+
+preparation of annotation file of chromosome 15 from GFF3 to GTF 
+we used genometools first which shows a GTF2.2 having no gene id, /
+only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
 ```
 ## Alignment 
 ```
