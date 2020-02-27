@@ -186,3 +186,9 @@ samtools sort  hs_T47D_shNR2F2_RNAseq_rep2.bam -o hs_T47D_shNR2F2_RNAseq_rep2.so
 # Visualization of Data using IGV
 ## Indexing the BAM file
 ```
+samtools index
+samtools index
+samtools index
+samtools index
+
+```
