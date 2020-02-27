@@ -20,7 +20,7 @@ https://github.com/ZainabKamel/NGS2-Project
 ```
 # Code file
 ```
-for the code open Script file
+for the code open [Open Github](CODE/README.md)
 ```
 # Data Download
 ```
@@ -190,11 +190,10 @@ trimmomatic is designed to be working with DNA data not RNA.
 5.12% overall alignment rate
 
 ## Sample REP2 hs_REP2_T47D_shNR2F2_RNAseq
-29668645 reads; of these:
-  29668645 (100.00%) were unpaired; of these:
-    28147110 (94.87%) aligned 0 times
-    1435885 (4.84%) aligned exactly 1 time
-    85650 (0.29%) aligned >1 times
-5.13% overall alignment rate
-
+27996919 reads; of these:
+  27996919 (100.00%) were unpaired; of these:
+    26406335 (94.32%) aligned 0 times
+    1465076 (5.23%) aligned exactly 1 time
+    125508 (0.45%) aligned >1 times
+5.68% overall alignment rate
 ```
