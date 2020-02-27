@@ -2,7 +2,17 @@
 
 # Abstract 
 ```
-High-throughput RNA-Sequencing is one of challenging technique for studying differential gene expression between biological samples to detect novel upregulated and downregulated genes. Trimming is a pre-processing step that widely used to low quality bases but still heterogeneously and unstandardized; that has an impact to downstream analyses. In this project we have downloaded four Homo Sapiens RNAseq fasta.gz bio-samples from Sequence Read Archive (SRA) of bio-project (PRJNA602619).This bio-project characterized NR2F2 Orphan Nuclear Receptor, a member of the steroid/thyroid hormone receptor superfamily and its effect  in estrogen receptor alpha mediated transcriptional regulation in breast cancer cells(MCF7 and T47D) using the ChIP-seq and RNA-seq methods. In this project we have downloaded two control runs ; hs T47D shCTRL RNAseq and two NR2F2 depleted T47D cells ;hs T47D shNR2F2 RNAseq from 54 years old females that used to study the influence of un-trimming and trimming processes in differential expression. The Aim of this project to determine the impact of both processes on subsequent genome alignment and gene expression differential bias.
+High-throughput RNA-Sequencing is one of challenging technique for studying differential gene expression
+between biological samples to detect novel upregulated and downregulated genes. Trimming is a pre-processing
+step that widely used to low quality bases but still heterogeneously and unstandardized; that has an impact
+to downstream analyses. In this project we have downloaded four Homo Sapiens RNAseq fasta.gz bio-samples 
+from Sequence Read Archive (SRA) of bio-project (PRJNA602619).This bio-project characterized NR2F2 Orphan 
+Nuclear Receptor, a member of the steroid/thyroid hormone receptor superfamily and its effect  in estrogen 
+receptor alpha mediated transcriptional regulation in breast cancer cells(MCF7 and T47D) using the ChIP-seq 
+and RNA-seq methods. In this project we have downloaded two control runs ; hs T47D shCTRL RNAseq and two 
+NR2F2 depleted T47D cells ;hs T47D shNR2F2 RNAseq from 54 years old females that used to study the influence 
+of un-trimming and trimming processes in differential expression. The Aim of this project to determine the i
+mpact of both processes on subsequent genome alignment and gene expression differential bias.
 ```
 # GitHub link
 ```
