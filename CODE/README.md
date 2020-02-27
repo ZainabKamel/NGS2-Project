@@ -19,21 +19,25 @@ conda activate ngs2
 ## Download
 mkdir -p ~/Desktop/PROJECT/SAMPLE_DATA && cd ~/Desktop/PROJECT/SAMPLE_DATA
 # Control Data
+```
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra46/SRZ/010958/SRR10958001/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/010958/SRR10958009/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz
-
+```
 # Sample Data 
+```
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra54/SRZ/010958/SRR10958000/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz
 wget https://sra-download.ncbi.nlm.nih.gov/traces/sra43/SRZ/010958/SRR10958005/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz
-
+```
 # Reference file
+```
 wget ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.6.fa.gz
 wget ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.15.fa.gz
-
+```
 # Annotation file
+```
 wget ftp://ftp.ensembl.org/pub/release-99/gff3/homo_sapiens/Homo_sapiens.GRCh38.99.chromosome.6.gff3.gz
 wget ftp://ftp.ensembl.org/pub/release-99/gff3/homo_sapiens/Homo_sapiens.GRCh38.99.chromosome.15.gff3.gz
-
+```
 # Preparation of GTF file
 ```
 >> first we used genometools for conversion of gff to gtf #but unfortunately it showed at GTF2.2 version which only has transcript and exon ids
