@@ -128,7 +128,7 @@ The NR2F2 gene we are looking for appeared to be on Forward strand, that's why w
 |ENSG00000258706| 0 |0|0|0|
 |ENSG00000259337| 0 |0|0|0|
 
-### DESeq Output
+### DESeq Output (filtered_results_deseq1.tsv attached above)
 
 | id         | baseMean         | baseMeanA        | baseMeanB        | foldChange       | log2FoldChange   | pval                 | padj                 | 
 |------------|------------------|------------------|------------------|------------------|------------------|----------------------|----------------------| 
