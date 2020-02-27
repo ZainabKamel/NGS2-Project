@@ -143,4 +143,16 @@ Input Reads: 8162000 Surviving: 8056040 (98.70%) Dropped: 105960 (1.30%)
 TrimmomaticSE: Completed successfully
 
 ```
+# QC for data after trimming
+```
+we have checked the QC of all data we have downloaded (both the control and sample) after being trimmed by the previously mentioned method
+you can find the report uploaded for each control and sample file
+(ATTACHED ABOVE SCREENSHOT FOR EACH QC REPORT IN AFTER TRIMMING QC FILES)
 
+```
+### Analysis of report: 
+```
+The ALERT regarding with **per base sequence**  whcih appeared because lower 
+quartile for bases was less than 10 and WARNING about the duplication levels, length distribution
+and overrepresented sequences are still there in CLTR rep1 and the two sample replicates. Interestingly, 
+we have found that the second replicate of control data revealed an alert after trimming regarding the duplication level; although, before trimming it only had an alert over the per base sequence. After searching on this we continued working because as mentioned in issue #13, the duplication could be ignored in this case as it may be due to PCR or it could be because the paramters provided for the trimmomatic is designed to be working with DNA data not RNA. 
