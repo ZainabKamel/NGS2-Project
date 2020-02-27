@@ -50,17 +50,6 @@ for f in ~/Desktop/PROJECT/SAMPLE_DATA/*.fastq.gz;do fastqc -t 1 -f fastq -noext
 mv ../Sample_data/*html ./
 mv ../Sample_data/*zip ./
 ```
-#Data Trimming 
-mkdir -p ~/Desktop/PROJECT/trimmomatic && cd ~/Desktop/PROJECT/trimmomatic
-#At first we croped the first 13 baseposition by using Headcrop:13 
-trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13
-#still we have warning after QC so we added crop:61 to cut the end too 
-1. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
-2. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz results1.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
-3. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz results2.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
-4. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz results3.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
-
-
 #Preparation of GTF file
 #first we used genometools for conversion of gff to gtf #but unfortunately it showed at GTF2.2 version which only has transcript and exon ids
 gunzip Homo_sapiens.GRCh38.99.chromosome.15.gff3.gz
@@ -117,5 +106,14 @@ cat simple_counts.txt | Rscript deseq1.r 2x2 > results_deseq1.tsv
 cat results_deseq1.tsv | awk ' $8 < 0.05 { print $0 }' > filtered_results_deseq1.tsv
 cat filtered_results_deseq1.tsv | Rscript draw-heatmap.r > hisat_output.pdf
 
+#Data Trimming 
+mkdir -p ~/Desktop/PROJECT/trimmomatic && cd ~/Desktop/PROJECT/trimmomatic
+#At first we croped the first 13 baseposition by using Headcrop:13 
+trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13
+#still we have warning after QC so we added crop:61 to cut the end too 
+1. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+2. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz results1.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+3. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz results2.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+4. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz results3.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
 
 
