@@ -32,14 +32,14 @@ for the code open Script file
 6. Annotation file of chromosome 15 "GFF3 format" 
 The links of SRA and ensembl are available in script 
 ```
-# QC for data
+# QC for data before trimming
 ```
 we have checked the QC of all data we have downloaded (both the control and sample)
 you can find the report uploaded for each control and sample file
 ```
 ### Analysis of report: 
 ```
-We found an **alert** regarding with **per base sequence**  whcih appeared because lower quartile for bases was less than 10 and **warning** about the duplication  
+We found an ALERT regarding with **per base sequence**  whcih appeared because lower quartile for bases was less than 10 and WARNING about the duplication  
 ```
 # Data trimming 
 
