@@ -103,6 +103,15 @@ samtools sort hs_T47D_shCTRL_RNAseq_rep2.bam -o hs_T47D_shCTRL_RNAseq_rep2.sorte
 samtools sort  hs_T47D_shNR2F2_RNAseq_rep1.bam -o hs_T47D_shNR2F2_RNAseq_rep1.sorted.bam
 samtools sort  hs_T47D_shNR2F2_RNAseq_rep2.bam -o hs_T47D_shNR2F2_RNAseq_rep2.sorted.bam
 ```
+# Visualization of Data using IGV
+## Indexing the BAM file
+```
+samtools index hs_T47D_shCTRL_RNAseq_rep1.sorted.bam
+samtools index hs_T47D_shCTRL_RNAseq_rep2.sorted.bam
+samtools index hs_T47D_shNR2F2_RNAseq_rep1.sorted.bam
+samtools index hs_T47D_shNR2F2_RNAseq_rep2.sorted.bam
+```
+
 # Differential Expression
 ## Quantification
 ```
@@ -119,9 +128,7 @@ cat simple_counts.txt | Rscript deseq1.r 2x2 > results_deseq1.tsv
 cat results_deseq1.tsv | awk ' $8 < 0.05 { print $0 }' > filtered_results_deseq1.tsv
 cat filtered_results_deseq1.tsv | Rscript draw-heatmap.r > hisat_output.pdf
 ```
-# Visualization of Data using IGV
-```
-```
+
 # Data Trimming 
 ```
 mkdir -p ~/Desktop/PROJECT/trimmomatic && cd ~/Desktop/PROJECT/trimmomatic
@@ -175,4 +182,7 @@ samtools sort hs_T47D_shCTRL_RNAseq_rep2.bam -o hs_T47D_shCTRL_RNAseq_rep2.sorte
 samtools sort  hs_T47D_shNR2F2_RNAseq_rep1.bam -o hs_T47D_shNR2F2_RNAseq_rep1.sorted.bam
 samtools sort  hs_T47D_shNR2F2_RNAseq_rep2.bam -o hs_T47D_shNR2F2_RNAseq_rep2.sorted.bam
 
+```
+# Visualization of Data using IGV
+## Indexing the BAM file
 ```
