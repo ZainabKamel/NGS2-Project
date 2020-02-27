@@ -47,7 +47,7 @@ gffread Homo_sapiens.GRCh38.99.chromosome.15.gff3 -T -o Homo_sapiens.GRCh38.99.c
 ```
 # Installing Software 
 conda install -c bioconda fastqc 
-conda install -c bioconda multiqc 
+conda install -c bioconda multiqc  
 ```
 # BEFORE TRIMMING QC 
 ```
