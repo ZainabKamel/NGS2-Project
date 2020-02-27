@@ -94,6 +94,11 @@ The NR2F2 gene we are looking for appeared to be on Forward strand, that's why w
 5.13% overall alignment rate
 
 ```
+# Visualization of untrimmed /*bam.bai files using IGV
+```
+we visualized the bam and bam.bai files using IGV. Thes screenshots were attached in the folder entitled "Visualization for Diff_Exp of Un-trimmed Data"
+
+```
 # Differential Expression for untrimmed data
 ## Quantification
 ### Counting the originated file (simple_count.txt attached above)
@@ -121,7 +126,6 @@ The NR2F2 gene we are looking for appeared to be on Forward strand, that's why w
 ```
 you can find the heatmap of the DEGs of untrimmed data attached in file entitled hisat_output.pdf
 ```
-# Visualization of DEGS of untrimmed data using IGV
 
 # Data trimming 
 ```
