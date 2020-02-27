@@ -36,8 +36,7 @@ The links of SRA and ensembl are available in script
 ```
 we have checked the QC of all data we have downloaded (both the control and sample)
 you can find the report uploaded for each control and sample file
-(ATTACHED ABOVE IN BEFORE TRIMMING QC FILES)
-(hs_T47D_shCTRL_RNAseq_rep1_fastqc.html)
+(ATTACHED ABOVE SCREENSHOT FOR EACH QC REPORT IN BEFORE TRIMMING QC FILES)
 ```
 ### Analysis of report: 
 ```
