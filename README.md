@@ -45,6 +45,13 @@ We found an ALERT regarding with **per base sequence**  whcih appeared because l
 and overrepresented sequences 
 ```
 # Data trimming 
+```
+We have trimmed the data based on error in per base sequence and the below are the on screen output 
+
+1. hs_T47D_shCTRL_RNAseq_rep1.fastq.gz
+Input Reads: 23830798 Surviving: 23506538 (98.64%) Dropped: 324260 (1.36%)
+TrimmomaticSE: Completed successfully
+```
 
 # Hisat Alignment for untrimmedd data 
 ## Indexing 
