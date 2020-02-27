@@ -204,3 +204,20 @@ samtools index
 samtools index
 
 ```
+# Differential Expression for Trimmed Data
+## Quantification
+```
+cd ~/Desktop/PROJECT/Hisat_TRIMMED/hisat_align_trimmed
+GTF=/home/zainabkamel/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.15.gtf
+featureCounts -a $GTF -g gene_id -o counts.txt  hs_T47D_shCTRL_RNAseq_rep*.bam  hs_T47D_shNR2F2_RNAseq_rep*.bam
+cat counts.txt | cut -f 1,7-10 > simple_counts_trimmed.txt
+```
+### Analyze the counts with Deseq
+```
+cat simple_counts_trimmed.txt | Rscript deseq1.r 2x2 > results_deseq_trimmed.tsv
+```
+### View only rows with pval < 0.05
+```
+cat results_deseq_trimmed.tsv | awk ' $8 < 0.05 { print $0 }' > filtered_results_deseq_trimmed.tsv
+cat filtered_results_deseq_trimmed.tsv | Rscript draw-heatmap.r > hisat_output_trimmed.pdf
+```
