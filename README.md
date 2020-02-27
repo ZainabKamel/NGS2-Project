@@ -121,6 +121,7 @@ The NR2F2 gene we are looking for appeared to be on Forward strand, that's why w
 ```
 you can find the heatmap of the DEGs of untrimmed data attached in file entitled hisat_output.pdf
 ```
+# Visualization of DEGS of untrimmed data using IGV
 
 # Data trimming 
 ```
