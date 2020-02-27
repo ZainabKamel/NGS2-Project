@@ -55,7 +55,11 @@ mkdir -p ~/Desktop/PROJECT/trimmomatic && cd ~/Desktop/PROJECT/trimmomatic
 #At first we croped the first 13 baseposition by using Headcrop:13 
 trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13
 #still we have warning after QC so we added crop:61 to cut the end too 
-trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+1. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+2. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+3. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+4. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+
 
 #Preparation of GTF file
 #first we used genometools for conversion of gff to gtf #but unfortunately it showed at GTF2.2 version which only has transcript and exon ids
