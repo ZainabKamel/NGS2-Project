@@ -1,4 +1,4 @@
-# NGS2-Project
+# The impact of un-trimming & trimming approaches on differential expression bias
 
 # Abstract 
 ```
@@ -38,8 +38,9 @@ we have checked the QC of all data we have downloaded (both the control and samp
 you can find the report uploaded for each control and sample file
 ```
 ### Analysis of report: 
-we found issues with "per base sequence"  (warning appeared because lower quartile for bases was less than 10)  so we trimmed data 
-
+```
+We found an **alert** regarding with **per base sequence**  whcih appeared because lower quartile for bases was less than 10 and **warning** about the duplication  
+```
 # Data trimming 
 
 # Hisat Alignment for untrimmedd data 
