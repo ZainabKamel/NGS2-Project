@@ -46,11 +46,14 @@ and overrepresented sequences
 ```
 # Data trimming 
 ```
-We have trimmed the data based on error in per base sequence and the below are the on screen output 
-
-1. hs_T47D_shCTRL_RNAseq_rep1.fastq.gz
+We trimmed data to remove the error of per base sequence and the on screen output was as follows:
+1. hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz
 Input Reads: 23830798 Surviving: 23506538 (98.64%) Dropped: 324260 (1.36%)
 TrimmomaticSE: Completed successfully
+2. hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz
+Input Reads: 26758033 Surviving: 26409186 (98.70%) Dropped: 348847 (1.30%)
+TrimmomaticSE: Completed successfully
+
 ```
 
 # Hisat Alignment for untrimmedd data 
