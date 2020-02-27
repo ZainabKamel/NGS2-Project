@@ -58,14 +58,15 @@ gt gff3_to_gtf Homo_sapiens.GRCh38.99.chromosome.6.gff > Homo_sapiens.GRCh38.99.
 gffread Homo_sapiens.GRCh38.99.chromosome.15.gff3 -T -o Homo_sapiens.GRCh38.99.chromosome.15.gtf
 
 UNTRIMMED DATA
-# INDEXING
+mkdir -p ~/Desktop/PROJECT/Hisat/Hisat_align/HisatIndex && cd ~/Desktop/PROJECT/Hisat/Hisat_align/HisatIndex
+# INDEXING using HISAT2
 mkdir -p ~/PROJECT/Hisat/hisat_align/hisatIndex && cd ~/PROJECT/Hisat/hisat_align/hisatIndex
 ln -s ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.15.fa .
 hisat2_extract_splice_sites.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.15.gtf > splicesites.tsv
 hisat2_extract_exons.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.15.gtf > exons.tsv
 hisat2-build -p 1 --ss splicesites.tsv --exon exons.tsv Homo_sapiens.GRCh38.dna.chromosome.15.fa Homo_sapiens.GRCh38
 
-# ALIGNMENT
+# ALIGNMENT of UNTRIMMED DATA using HISAT2
 cd ~/Desktop/PROJECT/Hisat/hisat_align/
 newfile="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz"
 hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile -S hs_T47D_shNR2F2_RNAseq_rep1.sam
@@ -111,10 +112,10 @@ mkdir -p ~/Desktop/PROJECT/trimmomatic && cd ~/Desktop/PROJECT/trimmomatic
 #At first we croped the first 13 baseposition by using Headcrop:13 
 trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13
 #still we have warning after QC so we added crop:61 to cut the end too 
-1. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
-2. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz results1.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
-3. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz results2.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
-4. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz results3.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+1. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz hs_T47D_shCTRL_RNAseq_rep1.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+2. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz hs_T47D_shCTRL_RNAseq_rep2.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+3. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz hs_T47D_shNR2F2_RNAseq_rep1.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
+4. trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz hs_T47D_shNR2F2_RNAseq_rep2.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13 CROP:61
 
 
 # AFTER TRIMMING QC 
@@ -125,4 +126,29 @@ for f in ~/Desktop/PROJECT/TRIMMED_DATA/*.fq.gz;do fastqc -t 1 -f fastq -noextra
 mv ../TRIMMED_DATA/*html ./
 mv ../TRIMMED_DATA/*zip ./
 ```
+# ALIGNMENT of TRIMMED DATA using HISAT2
+mkdir ~/Desktop/PROJECT/Hisat_TRIMMED/hisat_align_trimmed/hisatIndex_trimmed && cd ~/Desktop/PROJECT/Hisat_TRIMMED/hisat_align_trimmed/hisatIndex_trimmed
+newfile="~/Desktop/PROJECT/TRIMMED_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fq.gz"
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile -S hs_T47D_shNR2F2_RNAseq_rep1.sam
 
+newfile1="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep2.fq.gz"
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile1 -S hs_T47D_shNR2F2_RNAseq_rep2.sam
+
+newfile2="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz"
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile2 -S hs_T47D_shCTRL_RNAseq_rep1.sam
+
+newfile3="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz"
+hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile3 -S hs_T47D_shCTRL_RNAseq_rep2.sam
+
+# Preparing SAM/BAM/SORTED_BAM files
+#convert SAM file to BAM file
+samtools view -bS hs_T47D_shCTRL_RNAseq_rep1.sam > hs_T47D_shCTRL_RNAseq_rep1.bam
+samtools view -bS hs_T47D_shCTRL_RNAseq_rep2.sam > hs_T47D_shCTRL_RNAseq_rep2.bam
+samtools view -bS hs_T47D_shNR2F2_RNAseq_rep1.sam > hs_T47D_shNR2F2_RNAseq_rep1.bam
+samtools view -bS hs_T47D_shNR2F2_RNAseq_rep2.sam > hs_T47D_shNR2F2_RNAseq_rep2.bam
+
+#convert the BAM file to a sorted BAM file
+samtools sort hs_T47D_shCTRL_RNAseq_rep1.bam -o hs_T47D_shCTRL_RNAseq_rep1.sorted.bam
+samtools sort hs_T47D_shCTRL_RNAseq_rep2.bam -o hs_T47D_shCTRL_RNAseq_rep2.sorted.bam
+samtools sort  hs_T47D_shNR2F2_RNAseq_rep1.bam -o hs_T47D_shNR2F2_RNAseq_rep1.sorted.bam
+samtools sort  hs_T47D_shNR2F2_RNAseq_rep2.bam -o hs_T47D_shNR2F2_RNAseq_rep2.sorted.bam
