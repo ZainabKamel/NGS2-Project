@@ -128,7 +128,7 @@ conda install -y bioconductor-deseq r-gplots
 ```
 GTF=/home/zainabkamel/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.15.gtf
 featureCounts -a $GTF -g gene_id -o counts.txt  hs_T47D_shCTRL_RNAseq_rep*.bam  hs_T47D_shNR2F2_RNAseq_rep*.bam
-cat counts.txt | cut -f 1,7-12 > simple_counts.txt
+cat counts.txt | cut -f 1,7-10 > simple_counts.txt
 ```
 ### Analyze the counts with Deseq
 ```
