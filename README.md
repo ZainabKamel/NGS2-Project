@@ -194,10 +194,10 @@ trimmomatic is designed to be working with DNA data not RNA.
 5.61% overall alignment rate
 
 ## Sample REP2 hs_REP2_T47D_shNR2F2_RNAseq
-26409186 reads; of these:
-  26409186 (100.00%) were unpaired; of these:
-    24927190 (94.39%) aligned 0 times
-    1361964 (5.16%) aligned exactly 1 time
-    120032 (0.45%) aligned >1 times
-5.61% overall alignment rate
+8056040 reads; of these:
+  8056040 (100.00%) were unpaired; of these:
+    7602314 (94.37%) aligned 0 times
+    417254 (5.18%) aligned exactly 1 time
+    36472 (0.45%) aligned >1 times
+5.63% overall alignment rate
 ```
