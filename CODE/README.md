@@ -132,7 +132,7 @@ cat filtered_results_deseq1.tsv | Rscript draw-heatmap.r > hisat_output.pdf
 # Data Trimming 
 ```
 mkdir -p ~/Desktop/PROJECT/trimmomatic && cd ~/Desktop/PROJECT/trimmomatic
-#At first we croped the first 13 baseposition by using Headcrop:13 
+#At first we croped the first 13 basepair by using Headcrop:13 
 trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13
 #still we have warning after QC so we added crop:61 to cut the end too 
 
