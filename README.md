@@ -20,7 +20,7 @@ https://github.com/ZainabKamel/NGS2-Project
 ```
 # Code file
 ```
-for the code open [Open Github](CODE/README.md)
+for the code open READEME.md file in CODE folder  [Open Github](https://github.com/ZainabKamel/NGS2-Project/blob/master/CODE/README.md)
 ```
 # Data Download
 ```
