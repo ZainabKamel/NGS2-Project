@@ -1,4 +1,4 @@
-# The impact of un-trimming & trimming approaches on differential expression bias
+# The Impact of Un-trimming and Trimming Approaches on Differential Expression Bias
 
 # Abstract 
 ```
@@ -160,3 +160,41 @@ duplication level; although, before trimming it only had an alert over the per b
 searching on this we continued working because as mentioned in issue #13, the duplication could be 
 ignored in this case as it may be due to PCR or it could be because the paramters provided for the 
 trimmomatic is designed to be working with DNA data not RNA. 
+```
+
+# Hisat Alignment for untrimmedd data 
+### Alignment Summary
+```
+## Control REP1 hs_REP1_T47D_shCTRL_RNAseq
+23830798 reads; of these:
+  23830798 (100.00%) were unpaired; of these:
+    22636860 (94.99%) aligned 0 times
+    1056038 (4.43%) aligned exactly 1 time
+    137900 (0.58%) aligned >1 times
+5.01% overall alignment rate
+
+## Control REP2 hs_REP2_T47D_shCTRL_RNAseq
+28344397 reads; of these:
+  28344397 (100.00%) were unpaired; of these:
+    26884448 (94.85%) aligned 0 times
+    1377373 (4.86%) aligned exactly 1 time
+    82576 (0.29%) aligned >1 times
+5.15% overall alignment rate
+
+## Sample REP1 hs_REP1_T47D_shNR2F2_RNAseq
+26758033 reads; of these:
+  26758033 (100.00%) were unpaired; of these:
+    25388901 (94.88%) aligned 0 times
+    1288608 (4.82%) aligned exactly 1 time
+    80524 (0.30%) aligned >1 times
+5.12% overall alignment rate
+
+## Sample REP2 hs_REP2_T47D_shNR2F2_RNAseq
+29668645 reads; of these:
+  29668645 (100.00%) were unpaired; of these:
+    28147110 (94.87%) aligned 0 times
+    1435885 (4.84%) aligned exactly 1 time
+    85650 (0.29%) aligned >1 times
+5.13% overall alignment rate
+
+```
