@@ -44,6 +44,7 @@ wget ftp://ftp.ensembl.org/pub/release-99/gff3/homo_sapiens/Homo_sapiens.GRCh38.
 gunzip Homo_sapiens.GRCh38.99.chromosome.15.gff3.gz
 #gt gff3_to_gtf Homo_sapiens.GRCh38.99.chromosome.6.gff > Homo_sapiens.GRCh38.99.chromosome.15.gtf 
 >>so we switched to using 
+conda install gffcompare
 gffread Homo_sapiens.GRCh38.99.chromosome.15.gff3 -T -o Homo_sapiens.GRCh38.99.chromosome.15.gtf
 ```
 
@@ -68,6 +69,7 @@ mkdir -p ~/Desktop/PROJECT/Hisat/Hisat_align/HisatIndex && cd ~/Desktop/PROJECT/
 ```
 # INDEXING using HISAT2
 ```
+conda install -c bioconda -y hisat2
 mkdir -p ~/PROJECT/Hisat/hisat_align/hisatIndex && cd ~/PROJECT/Hisat/hisat_align/hisatIndex
 ln -s ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.15.fa .
 hisat2_extract_splice_sites.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.15.gtf > splicesites.tsv
@@ -91,6 +93,7 @@ hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfi
 ```
 # Preparing SAM/BAM/SORTED_BAM files
 ```
+conda install -y samtools
 #convert SAM file to BAM file
 samtools view -bS hs_T47D_shCTRL_RNAseq_rep1.sam > hs_T47D_shCTRL_RNAseq_rep1.bam
 samtools view -bS hs_T47D_shCTRL_RNAseq_rep2.sam > hs_T47D_shCTRL_RNAseq_rep2.bam
@@ -113,6 +116,14 @@ samtools index hs_T47D_shNR2F2_RNAseq_rep2.sorted.bam
 ```
 
 # Differential Expression
+## Preparing enviroment
+```
+wget -c https://raw.githubusercontent.com/mr-eyes/nu-ngs01/master/Day-6/deseq1.r
+wget -c https://raw.githubusercontent.com/mr-eyes/nu-ngs01/master/Day-6/draw-heatmap.r
+conda install subread
+conda install r
+conda install -y bioconductor-deseq r-gplots
+```
 ## Quantification
 ```
 GTF=/home/zainabkamel/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.15.gtf
@@ -131,6 +142,7 @@ cat filtered_results_deseq1.tsv | Rscript draw-heatmap.r > hisat_output.pdf
 
 # Data Trimming 
 ```
+conda install -c bioconda trimmomatic 
 mkdir -p ~/Desktop/PROJECT/trimmomatic && cd ~/Desktop/PROJECT/trimmomatic
 #At first we croped the first 13 basepair by using Headcrop:13 
 trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz results.fq.gz ILLUMINACLIP:TRUSeq-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 HEADCROP:13
