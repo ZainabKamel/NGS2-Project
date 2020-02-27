@@ -63,17 +63,18 @@ trimmomatic SE -phred33 ~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1
 
 #Preparation of GTF file
 #first we used genometools for conversion of gff to gtf #but unfortunately it showed at GTF2.2 version which only has transcript and exon ids
-gt gff3_to_gtf Homo_sapiens.GRCh38.99.chromosome.6.gff > Homo_sapiens.GRCh38.99.chromosome.6.gtf 
+gunzip Homo_sapiens.GRCh38.99.chromosome.15.gff3.gz
+gt gff3_to_gtf Homo_sapiens.GRCh38.99.chromosome.6.gff > Homo_sapiens.GRCh38.99.chromosome.15.gtf 
 #so we switched to using 
-gffread Homo_sapiens.GRCh38.99.chromosome.6.gff3 -T -o Homo_sapiens.GRCh38.99.chromosome.6.gtf
+gffread Homo_sapiens.GRCh38.99.chromosome.15.gff3 -T -o Homo_sapiens.GRCh38.99.chromosome.15.gtf
 
 UNTRIMMED DATA
 # INDEXING
 mkdir -p ~/PROJECT/Hisat/hisat_align/hisatIndex && cd ~/PROJECT/Hisat/hisat_align/hisatIndex
-ln -s ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.6.fa .
-hisat2_extract_splice_sites.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > splicesites.tsv
-hisat2_extract_exons.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.6.gtf > exons.tsv
-hisat2-build -p 1 --ss splicesites.tsv --exon exons.tsv Homo_sapiens.GRCh38.dna.chromosome.6.fa Homo_sapiens.GRCh38
+ln -s ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.dna.chromosome.15.fa .
+hisat2_extract_splice_sites.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.15.gtf > splicesites.tsv
+hisat2_extract_exons.py ~/Desktop/PROJECT/SAMPLE_DATA/Homo_sapiens.GRCh38.99.chromosome.15.gtf > exons.tsv
+hisat2-build -p 1 --ss splicesites.tsv --exon exons.tsv Homo_sapiens.GRCh38.dna.chromosome.15.fa Homo_sapiens.GRCh38
 
 # ALIGNMENT
 cd ~/Desktop/PROJECT/Hisat/hisat_align/
