@@ -107,6 +107,8 @@ cat simple_counts.txt | Rscript deseq1.r 2x2 > results_deseq1.tsv
 cat results_deseq1.tsv | awk ' $8 < 0.05 { print $0 }' > filtered_results_deseq1.tsv
 cat filtered_results_deseq1.tsv | Rscript draw-heatmap.r > hisat_output.pdf
 
+#Visualization of Data using IGV
+
 #Data Trimming 
 mkdir -p ~/Desktop/PROJECT/trimmomatic && cd ~/Desktop/PROJECT/trimmomatic
 #At first we croped the first 13 baseposition by using Headcrop:13 
@@ -127,18 +129,18 @@ mv ../TRIMMED_DATA/*html ./
 mv ../TRIMMED_DATA/*zip ./
 ```
 # ALIGNMENT of TRIMMED DATA using HISAT2
-mkdir ~/Desktop/PROJECT/Hisat_TRIMMED/hisat_align_trimmed/hisatIndex_trimmed && cd ~/Desktop/PROJECT/Hisat_TRIMMED/hisat_align_trimmed/hisatIndex_trimmed
+mkdir ~/Desktop/PROJECT/Hisat_TRIMMED/hisat_align_trimmed && cd ~/Desktop/PROJECT/Hisat_TRIMMED/hisat_align_trimmed
 newfile="~/Desktop/PROJECT/TRIMMED_DATA/hs_T47D_shNR2F2_RNAseq_rep1.fq.gz"
-hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile -S hs_T47D_shNR2F2_RNAseq_rep1.sam
+hisat2 -p 1 -x ~/Desktop/PROJECT/Hisat/hisat_align/hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile -S hs_T47D_shNR2F2_RNAseq_rep1.sam
 
-newfile1="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shNR2F2_RNAseq_rep2.fq.gz"
-hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile1 -S hs_T47D_shNR2F2_RNAseq_rep2.sam
+newfile1="~/Desktop/PROJECT/TRIMMED_DATA/hs_T47D_shNR2F2_RNAseq_rep2.fq.gz"
+hisat2 -p 1 -x ~/Desktop/PROJECT/Hisat/hisat_align/hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile1 -S hs_T47D_shNR2F2_RNAseq_rep2.sam
 
-newfile2="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep1.fastq.gz"
-hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile2 -S hs_T47D_shCTRL_RNAseq_rep1.sam
+newfile2="~/Desktop/PROJECT/TRIMMED_DATA/hs_T47D_shCTRL_RNAseq_rep1.fq.gz"
+hisat2 -p 1 -x ~/Desktop/PROJECT/Hisat/hisat_align/hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile2 -S hs_T47D_shCTRL_RNAseq_rep1.sam
 
-newfile3="~/Desktop/PROJECT/SAMPLE_DATA/hs_T47D_shCTRL_RNAseq_rep2.fastq.gz"
-hisat2 -p 1 -x hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile3 -S hs_T47D_shCTRL_RNAseq_rep2.sam
+newfile3="~/Desktop/PROJECT/TRIMMED_DATA/hs_T47D_shCTRL_RNAseq_rep2.fq.gz"
+hisat2 -p 1 -x ~/Desktop/PROJECT/Hisat/hisat_align/hisatIndex/Homo_sapiens.GRCh38 --dta --rna-strandness F -U $newfile3 -S hs_T47D_shCTRL_RNAseq_rep2.sam
 
 # Preparing SAM/BAM/SORTED_BAM files
 #convert SAM file to BAM file
