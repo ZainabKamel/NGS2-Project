@@ -1,5 +1,9 @@
 # NGS2-Project
 
+# Abstract 
+```
+High-throughput RNA-Sequencing is one of challenging technique for studying differential gene expression between biological samples to detect novel upregulated and downregulated genes. Trimming is a pre-processing step that widely used to low quality bases but still heterogeneously and unstandardized; that has an impact to downstream analyses. In this project we have downloaded four Homo Sapiens RNAseq fasta.gz bio-samples from Sequence Read Archive (SRA) of bio-project (PRJNA602619).This bio-project characterized NR2F2 Orphan Nuclear Receptor, a member of the steroid/thyroid hormone receptor superfamily and its effect  in estrogen receptor alpha mediated transcriptional regulation in breast cancer cells(MCF7 and T47D) using the ChIP-seq and RNA-seq methods. In this project we have downloaded two control runs ; hs T47D shCTRL RNAseq and two NR2F2 depleted T47D cells ;hs T47D shNR2F2 RNAseq from 54 years old females that used to study the influence of un-trimming and trimming processes in differential expression. The Aim of this project to determine the impact of both processes on subsequent genome alignment and gene expression differential bias.
+```
 # GitHub link
 ```
 https://github.com/ZainabKamel/NGS2-Project
@@ -20,11 +24,11 @@ The links of SRA and ensembl are available in script
 ```
 # QC for data
 ```
-we have checked the QC of all data we have downloaded and obtained a merged report for them. 
-you can find the report uploaded with the name multiqc_report.html
+we have checked the QC of all data we have downloaded (both the control and sample)
+you can find the report uploaded for each control and sample file
 ```
 ### Analysis of report: 
-we found issues with "per base sequence"  (warning appeared because lower quartile for bases was less than 10) and issues with "duplicates levels" (warning appeared because non-unique sequences make up more than 20% of total) so we trimmed data 
+we found issues with "per base sequence"  (warning appeared because lower quartile for bases was less than 10)  so we trimmed data 
 
 # Data trimming 
 
