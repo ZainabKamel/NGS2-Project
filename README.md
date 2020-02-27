@@ -166,7 +166,7 @@ ignored in this case as it may be due to PCR or it could be because the paramter
 trimmomatic is designed to be working with DNA data not RNA. 
 ```
 
-# Hisat Alignment for untrimmedd data 
+# Hisat Alignment for Trimmedd data 
 ### Alignment Summary
 ```
 ## Control REP1 hs_REP1_T47D_shCTRL_RNAseq
