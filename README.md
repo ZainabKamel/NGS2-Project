@@ -44,27 +44,6 @@ We found an ALERT regarding with **per base sequence**  whcih appeared because l
 +quartile for bases was less than 10 and WARNING about the duplication levels, length distribution
 and overrepresented sequences 
 ```
-# Data trimming 
-```
-We trimmed data to remove the error of per base sequence and the on screen output was as follows:
-1. hs_T47D_shCTRL_RNAseq_rep1.fastq.gz
-Input Reads: 23830798 Surviving: 23506538 (98.64%) Dropped: 324260 (1.36%)
-TrimmomaticSE: Completed successfully
-
-2.hs_T47D_shCTRL_RNAseq_rep2.fastq.gz
-Input Reads: 28344397 Surviving: 27996919 (98.77%) Dropped: 347478 (1.23%)
-TrimmomaticSE: Completed successfully
-
-3. hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz
-Input Reads: 26758033 Surviving: 26409186 (98.70%) Dropped: 348847 (1.30%)
-TrimmomaticSE: Completed successfully
-
-4.hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz
-Input Reads: 8162000 Surviving: 8056040 (98.70%) Dropped: 105960 (1.30%)
-TrimmomaticSE: Completed successfully
-
-```
-
 # Hisat Alignment for untrimmedd data 
 ## Indexing 
 ```
@@ -141,5 +120,26 @@ The NR2F2 gene we are looking for appeared to be on Forward strand, that's why w
 ### Heatmap Visualization of rows with pval < 0.05 
 ```
 you can find the heatmap of the DEGs of untrimmed data attached in file entitled hisat_output.pdf
+```
+
+# Data trimming 
+```
+We trimmed data to remove the error of per base sequence and the on screen output was as follows:
+1. hs_T47D_shCTRL_RNAseq_rep1.fastq.gz
+Input Reads: 23830798 Surviving: 23506538 (98.64%) Dropped: 324260 (1.36%)
+TrimmomaticSE: Completed successfully
+
+2.hs_T47D_shCTRL_RNAseq_rep2.fastq.gz
+Input Reads: 28344397 Surviving: 27996919 (98.77%) Dropped: 347478 (1.23%)
+TrimmomaticSE: Completed successfully
+
+3. hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz
+Input Reads: 26758033 Surviving: 26409186 (98.70%) Dropped: 348847 (1.30%)
+TrimmomaticSE: Completed successfully
+
+4.hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz
+Input Reads: 8162000 Surviving: 8056040 (98.70%) Dropped: 105960 (1.30%)
+TrimmomaticSE: Completed successfully
+
 ```
 
