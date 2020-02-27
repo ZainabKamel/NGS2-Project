@@ -37,10 +37,13 @@ The links of SRA and ensembl are available in script
 we have checked the QC of all data we have downloaded (both the control and sample)
 you can find the report uploaded for each control and sample file
 (ATTACHED ABOVE IN BEFORE TRIMMING QC FILES)
+(hs_T47D_shCTRL_RNAseq_rep1_fastqc.html)
 ```
 ### Analysis of report: 
 ```
-We found an ALERT regarding with **per base sequence**  whcih appeared because lower quartile for bases was less than 10 and WARNING about the duplication levels, length distribution and overrepresented sequences 
+We found an ALERT regarding with **per base sequence**  whcih appeared because lower 
++quartile for bases was less than 10 and WARNING about the duplication levels, length distribution
+and overrepresented sequences 
 ```
 # Data trimming 
 
