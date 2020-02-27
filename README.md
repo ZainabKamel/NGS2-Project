@@ -94,7 +94,7 @@ The NR2F2 gene we are looking for appeared to be on Forward strand, that's why w
 5.13% overall alignment rate
 
 ```
-# Differential Expression
+# Differential Expression for untrimmed data
 ## Quantification
 ### Counting the originated file (simple_count.txt attached above)
 | Geneid        |hs_T47D_shCTRL_RNAseq_rep1.bam|hs_T47D_shCTRL_RNAseq_rep2.bam|hs_T47D_shNR2F2_RNAseq_rep1.bam|hs_T47D_shNR2F2_RNAseq_rep2.bam|
