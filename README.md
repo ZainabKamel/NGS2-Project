@@ -201,6 +201,9 @@ trimmomatic is designed to be working with DNA data not RNA.
     36472 (0.45%) aligned >1 times
 5.63% overall alignment rate
 ```
+# Differential Expression for Trimmed Data
+## Quantification
+### Counting the originated file (simple_count_trimmed.txt attached above)
 | Geneid        |hs_T47D_shCTRL_RNAseq_rep1.bam|hs_T47D_shCTRL_RNAseq_rep2.bam|hs_T47D_shNR2F2_RNAseq_rep1.bam|hs_T47D_shNR2F2_RNAseq_rep2.bam|
 | ------------- | ------------- |-------------|-------------|-------------|
 |ENSG00000215567| 7 |2|5|2|
@@ -210,8 +213,9 @@ trimmomatic is designed to be working with DNA data not RNA.
 |ENSG00000188403| 0 |0|0|0|
 |ENSG00000258706| 0 |0|0|0|
 |ENSG00000259337| 0 |0|0|0|
-|ENSG00000258780| 77|93|105|29
-### DESeq Output (filtered_results_deseq1.tsv attached above)
+|ENSG00000258780| 77|93|105|29|
+
+### DESeq Output (filtered_results_deseq_trimmed.tsv attached above)
 
 | id         | baseMean         | baseMeanA        | baseMeanB        | foldChange       | log2FoldChange   | pval                 | padj                 | 
 |------------|------------------|------------------|------------------|------------------|------------------|----------------------|----------------------| 
