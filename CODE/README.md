@@ -195,13 +195,13 @@ samtools sort  hs_T47D_shNR2F2_RNAseq_rep1.bam -o hs_T47D_shNR2F2_RNAseq_rep1.so
 samtools sort  hs_T47D_shNR2F2_RNAseq_rep2.bam -o hs_T47D_shNR2F2_RNAseq_rep2.sorted.bam
 
 ```
-# Visualization of Data using IGV
+# Visualization of Data using IGV 
 ## Indexing the BAM file
 ```
-samtools index
-samtools index
-samtools index
-samtools index
+samtools index hs_T47D_shCTRL_RNAseq_rep1.sorted.bam
+samtools index hs_T47D_shCTRL_RNAseq_rep2.sorted.bam
+samtools index hs_T47D_shNR2F2_RNAseq_rep1.sorted.bam
+samtools index hs_T47D_shNR2F2_RNAseq_rep2.sorted.bam
 
 ```
 # Differential Expression for Trimmed Data
