@@ -221,8 +221,20 @@ cat simple_counts_trimmed.txt | Rscript deseq1.r 2x2 > results_deseq_trimmed.tsv
 cat results_deseq_trimmed.tsv | awk ' $8 < 0.05 { print $0 }' > filtered_results_deseq_trimmed.tsv
 cat filtered_results_deseq_trimmed.tsv | Rscript draw-heatmap.r > hisat_output_trimmed.pdf
 ```
-
-
-
-
+# Extra NCBI BLAST alignment analysis
+## Conversion of fastq files to fasta file
+```
+gunzip -K hs_T47D_shCTRL_RNAseq_rep1.fq.gz | cat hs_T47D_shCTRL_RNAseq_rep1.fq | paste ----| sed 's/^@/>/g' | cut -f1,2 | tr "\t" "\n" >  hs_T47D_shCTRL_RNAseq_rep1.fa    or ##"seqtk seq -a in.fq.gz > out.fa"
+gunzip -K hs_T47D_shCTRL_RNAseq_rep2.fq.gz | cat hs_T47D_shCTRL_RNAseq_rep2.fq | paste ----| sed 's/^@/>/g' | cut -f1,2 | tr "\t" "\n" >  hs_T47D_shCTRL_RNAseq_rep2.fa  
+gunzip -K hs_T47D_shNR2F2_RNAseq_rep1.fq.gz | cat hs_T47D_shNR2F2_RNAseq_rep1.fq | paste ----| sed 's/^@/>/g' | cut -f1,2 | tr "\t" "\n" >  s_T47D_shNR2F2_RNAseq_rep1.fa  
+gunzip -K hs_T47D_shNR2F2_RNAseq_rep2.fq.gz | cat hs_T47D_shNR2F2_RNAseq_rep2.fq | paste ----| sed 's/^@/>/g' | cut -f1,2 | tr "\t" "\n" >  s_T47D_shNR2F2_RNAseq_rep2.fa 
+```
+## Removal of Multiheader in output fasta file 
+```
+ZAIND ADD THE CODE HERE
+```
+## BLAST alignments
+```
+ALL the fasta files of control and sample data upload to Nucleotide BLAST "BLASTn" by using nr/nt database with specification of organism with "Homo Sapiens"
+```
 
