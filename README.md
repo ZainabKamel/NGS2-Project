@@ -18,6 +18,10 @@ mpact of both processes on subsequent genome alignment and gene expression diffe
 ```
 https://github.com/ZainabKamel/NGS2-Project
 ```
+# Link to access data on SRA
+```
+https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP244363
+```
 # Code file
 ```
 for the code open READEME.md file in CODE folder CODE/README.md 
