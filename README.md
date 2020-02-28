@@ -205,12 +205,13 @@ trimmomatic is designed to be working with DNA data not RNA.
 ## Converting of Fastq files to fasta files
 ```
 gunzip -k hs_T47D_shCTRL_RNAseq_rep1.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shCTRL_RNAseq_rep1.fa or " seqtk seq -a in.fastq.gz > out.fasta" 
-gunzip -k hs_T47D_shCTRL_RNAseq_rep2.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shCTRL_RNAseq_rep2.fa
-gunzip -k hs_T47D_shNR2F2_RNAseq_rep1.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shNR2F2_RNAseq_rep2.fa
-gunzip -k hs_T47D_shNR2F2_RNAseq_rep2.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shNR2F2_RNAseq_rep2.fa
+gunzip -k hs_T47D_shCTRL_RNAseq_rep2.fastq | cat hs_T47D_shCTRL_RNAseq_rep2.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shCTRL_RNAseq_rep2.fa
+gunzip -k hs_T47D_shNR2F2_RNAseq_rep1.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shNR2F2_RNAseq_rep1.fa
+gunzip -k hs_T47D_shNR2F2_RNAseq_rep2.fastq | cat hs_T47D_shCTRL_RNAseq_rep2.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shNR2F2_RNAseq_rep2.fa
 ```
 ## Removal of multiheaderID in ooutput fasta file to one ID
 ```
+ZAINAB PUT THE CODE HERE
 ```
 ## Alignment of reads to NCBI BLAST alignment
 ```
