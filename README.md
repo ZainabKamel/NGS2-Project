@@ -201,20 +201,22 @@ trimmomatic is designed to be working with DNA data not RNA.
     36472 (0.45%) aligned >1 times
 5.63% overall alignment rate
 ```
-# NCBI blast alignment of all samples
-## Converting of Fastq files to fasta files
-```
-gunzip -k hs_T47D_shCTRL_RNAseq_rep1.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shCTRL_RNAseq_rep1.fa or " seqtk seq -a in.fastq.gz > out.fasta" 
-gunzip -k hs_T47D_shCTRL_RNAseq_rep2.fastq | cat hs_T47D_shCTRL_RNAseq_rep2.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shCTRL_RNAseq_rep2.fa
-gunzip -k hs_T47D_shNR2F2_RNAseq_rep1.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shNR2F2_RNAseq_rep1.fa
-gunzip -k hs_T47D_shNR2F2_RNAseq_rep2.fastq | cat hs_T47D_shCTRL_RNAseq_rep2.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shNR2F2_RNAseq_rep2.fa
-```
-## Removal of multiheaderID in ooutput fasta file to one ID
-```
-ZAINAB PUT THE CODE HERE
-```
-## Alignment of reads to NCBI BLAST alignment
-```
-we align each fasta sequence of both sample and control data that indicate the presence of mitochondrion complete genome in control samples 
-(ATTACHED ABOVE SCREENSHOT FOR BLAST ALIGNMENT RESULTS)
-```
+| Geneid        |hs_T47D_shCTRL_RNAseq_rep1.bam|hs_T47D_shCTRL_RNAseq_rep2.bam|hs_T47D_shNR2F2_RNAseq_rep1.bam|hs_T47D_shNR2F2_RNAseq_rep2.bam|
+| ------------- | ------------- |-------------|-------------|-------------|
+|ENSG00000215567| 7 |2|5|2|
+|ENSG00000201241| 1 |1|1|0|
+|ENSG00000258463| 0 |1|2|0|
+|ENSG00000274347| 0 |0|0|0|
+|ENSG00000188403| 0 |0|0|0|
+|ENSG00000258706| 0 |0|0|0|
+|ENSG00000259337| 0 |0|0|0|
+|ENSG00000258780| 77|93|105|29
+### DESeq Output (filtered_results_deseq1.tsv attached above)
+
+| id         | baseMean         | baseMeanA        | baseMeanB        | foldChange       | log2FoldChange   | pval                 | padj                 | 
+|------------|------------------|------------------|------------------|------------------|------------------|----------------------|----------------------| 
+|ENSG00000185551|1139.47799460156|1862.50163959567|416.454349607454|0.223599453956917|-2.16101142984852|1.98779882849516e-15| 9.65399264176276e-08| 
+|ENSG00000128965|172.07940920188|68.8166455576957|275.342172846064|4.00109843504677|2.00039612231184|1.40728755710827e-10| 9.39729003690993e-61 | 
+|ENSG00000140465|643.314371739867|235.846844998906|1050.78189848083|4.4553570283533|2.15554104620201|1.98829913800446e-09| 9.09315472447373e-07| 
+|ENSG00000128739|107.580097998159|42.8485221399427|172.311673856375|4.02141463114194|2.00770309402263|7.47024287841483e-09| 2.56229330729629e-06| 
+
