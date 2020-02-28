@@ -231,7 +231,14 @@ gunzip -K hs_T47D_shNR2F2_RNAseq_rep2.fq.gz | cat hs_T47D_shNR2F2_RNAseq_rep2.fq
 ```
 ## Removal of Multiheader in output fasta file 
 ```
-ZAIND ADD THE CODE HERE
+grep -v ">" hs_T47D_shCTRL_RNAseq_rep1.fa > hs_T47D_shCTRL_RNAseq_rep1.txt && grep -m1"" hs_T47D_shCTRL_RNAseq_rep1.fa | cat - hs_T47D_shCTRL_RNAseq_rep1.txt > temp && mv temp hs_T47D_shCTRL_RNAseq_rep1.txt
+
+grep -v ">" hs_T47D_shCTRL_RNAseq_rep2.fa > hs_T47D_shCTRL_RNAseq_rep2.txt && grep -m1"" hs_T47D_shCTRL_RNAseq_rep2.fa | cat - hs_T47D_shCTRL_RNAseq_rep2.txt > temp && mv temp hs_T47D_shCTRL_RNAseq_rep2.txt
+
+grep -v ">" hs_T47D_shNR2F2_RNAseq_rep1.fa > hs_T47D_shNR2F2_RNAseq_rep1.txt && grep -m1"" hs_T47D_shNR2F2_RNAseq_rep1.fa | cat - hs_T47D_shNR2F2_RNAseq_rep1.txt > temp && mv temp hs_T47D_shNR2F2_RNAseq_rep1.txt
+
+grep -v ">" hs_T47D_shNR2F2_RNAseq_rep2.fa > hs_T47D_shNR2F2_RNAseq_rep2.txt && grep -m1"" hs_T47D_shNR2F2_RNAseq_rep2.fa | cat - hs_T47D_shNR2F2_RNAseq_rep2.txt > temp && mv temp hs_T47D_shNR2F2_RNAseq_rep2.txt
+
 ```
 ## BLAST alignments
 ```
