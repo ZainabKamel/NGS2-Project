@@ -228,7 +228,10 @@ trimmomatic is designed to be working with DNA data not RNA.
 |ENSG00000140465|643.314371739867|235.846844998906|1050.78189848083|4.4553570283533|2.15554104620201|1.98829913800446e-09| 9.09315472447373e-07| 
 |ENSG00000128739|123.742965127761|48.4703182427844|199.015612012738|4.10592748774379|2.03770814912304|4.77544375341107e-10| 2.27470304120814e-07| 
 ```
-# Extra NCBI BLAST 
+
+
+
+# Extra NCBI BLAST
 ```
 According to the issue 15 we dicided to align our samples to NCBI BLAST database 
 ALL the fasta files of control and sample data upload to Nucleotide BLAST "BLASTn" by using nr/nt database with specification of organism with "Homo Sapiens"
