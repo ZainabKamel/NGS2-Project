@@ -47,7 +47,7 @@ and overrepresented sequences
 # Hisat2 Alignment for untrimmedd data 
 ## Indexing 
 ```
-We first worked on chromosome 6, because we were tracking ESR-1 gene on chr 6 but after reviewing the main abstract of the study we figured out we need to work on chr 15 where NR2F2 is located as NR2F2 depleted in T47D cells of samples Data. 
+We first worked on chromosome 6, because we were tracking ESR-1 gene on chr 6 but after reviewing the main abstract of the study we figured out we need to work on chr 15 where NR2F2 is located. 
 
 preparation of annotation file of chromosome 6 from GFF3 to GTF 
 we used genometools first which shows a GTF2.2 having no gene id, only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
@@ -112,7 +112,7 @@ we visualized the bam and bam.bai files using IGV. These screenshots were attach
 |ENSG00000258706| 0 |0|0|0|
 |ENSG00000259337| 0 |0|0|0|
 
-### DESeq Output (filtered_results_deseq1.tsv attached above)
+### DESeq Output (results_deseq15.tsv attached above)
 
 | id         | baseMean         | baseMeanA        | baseMeanB        | foldChange       | log2FoldChange   | pval                 | padj                 | 
 |------------|------------------|------------------|------------------|------------------|------------------|----------------------|----------------------| 
