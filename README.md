@@ -44,10 +44,10 @@ We found an ALERT regarding with **per base sequence**  whcih appeared because l
 +quartile for bases was less than 10 and WARNING about the duplication levels, length distribution
 and overrepresented sequences 
 ```
-# Hisat Alignment for untrimmedd data 
+# Hisat2 Alignment for untrimmedd data 
 ## Indexing 
 ```
-We first worked on chromosome 6, because we were tracking ESR-1 gene on chr 6 but after reviewing the main abstract of the study we figured out we need to work on chr 15 where NR2F2 is located. 
+We first worked on chromosome 6, because we were tracking ESR-1 gene on chr 6 but after reviewing the main abstract of the study we figured out we need to work on chr 15 where NR2F2 is located as NR2F2 depleted in T47D cells of samples Data. 
 
 preparation of annotation file of chromosome 6 from GFF3 to GTF 
 we used genometools first which shows a GTF2.2 having no gene id, only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
@@ -56,7 +56,7 @@ we used genometools first which shows a GTF2.2 having no gene id, only transcrip
 ```
 At first, we failed to work using for loop so we aligned each sample alone, but after solving the issue of for loop we reused it for conducting the resullts "viewd in details in issue number 11"
 
-we aligned data using Hisat and these were the output of the four files (two samples and two controls)
+we aligned data using Hisat2 and these were the output of the four files (two samples and two controls)
 The NR2F2 gene we are looking for appeared to be on Forward strand, that's why we focused on F in the command line 
 ```
 ### Alignment Summary
@@ -96,7 +96,7 @@ The NR2F2 gene we are looking for appeared to be on Forward strand, that's why w
 ```
 # Visualization of untrimmed /*bam.bai files using IGV
 ```
-we visualized the bam and bam.bai files using IGV. Thes screenshots were attached in the folder entitled "Visualization for Diff_Exp of Un-trimmed Data"
+we visualized the bam and bam.bai files using IGV. These screenshots were attached in the folder entitled "Visualization of  Un-trimmed Data with IGV"
 
 ```
 # Differential Expression for untrimmed data
