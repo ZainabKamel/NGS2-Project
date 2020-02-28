@@ -201,3 +201,18 @@ trimmomatic is designed to be working with DNA data not RNA.
     36472 (0.45%) aligned >1 times
 5.63% overall alignment rate
 ```
+# NCBI blast alignment of all samples
+## Converting of Fastq files to fasta files
+```
+gunzip -k hs_T47D_shCTRL_RNAseq_rep1.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shCTRL_RNAseq_rep1.fa or " seqtk seq -a in.fastq.gz > out.fasta" 
+gunzip -k hs_T47D_shCTRL_RNAseq_rep2.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shCTRL_RNAseq_rep2.fa
+gunzip -k hs_T47D_shNR2F2_RNAseq_rep1.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shNR2F2_RNAseq_rep2.fa
+gunzip -k hs_T47D_shNR2F2_RNAseq_rep2.fastq | cat hs_T47D_shCTRL_RNAseq_rep1.fastq | paste ---- | sed 's/^@/>/g' |cut -f1,2 | tr "\t" "\n" > hs_T47D_shNR2F2_RNAseq_rep2.fa
+```
+### Removal of multiheaderID in ooutput fasta file to one ID
+```
+```
+#### Alignment of reads to NCBI BLAST alignment
+```
+we align each fasta sequence of both sample and control data that indicate the presence of mitochondrion complete genome in control samples 
+(ATTACHED ABOVE SCREENSHOT FOR BLAST ALIGNMENT RESULTS)
