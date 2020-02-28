@@ -221,3 +221,8 @@ cat simple_counts_trimmed.txt | Rscript deseq1.r 2x2 > results_deseq_trimmed.tsv
 cat results_deseq_trimmed.tsv | awk ' $8 < 0.05 { print $0 }' > filtered_results_deseq_trimmed.tsv
 cat filtered_results_deseq_trimmed.tsv | Rscript draw-heatmap.r > hisat_output_trimmed.pdf
 ```
+
+
+
+
+
