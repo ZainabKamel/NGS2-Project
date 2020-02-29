@@ -210,6 +210,11 @@ trimmomatic is designed to be working with DNA data not RNA.
     36472 (0.45%) aligned >1 times
 5.63% overall alignment rate
 ```
+# Visualization of trimmed /*bam /*bam.bai files using IGV
+```
+we visualized the bam and bam.bai files using IGV. These screenshots were attached in the folder entitled "Visualization of trimmed Data with IGV"
+On NCBI, molecular location of gene NR2F2 at bp 96,328,518
+```
 # Differential Expression for Trimmed Data
 ## Quantification
 ### Counting the originated file (simple_count_trimmed.txt attached above)
