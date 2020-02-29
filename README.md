@@ -245,4 +245,4 @@ ALL the fasta files of control and sample data upload to Nucleotide BLAST "BLAST
 ```
 # Conclusion 
 ```
-
+After comparing the trimmed and untrimmed data resulting from the differential expression analysis, we found that gene ENSG00000166173 disappeared from the DEGs list in the trimmed data. 
