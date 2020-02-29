@@ -213,7 +213,7 @@ trimmomatic is designed to be working with DNA data not RNA.
 # Visualization of trimmed /*bam /*bam.bai files using IGV
 ```
 we visualized the bam and bam.bai files using IGV. These screenshots were attached in the folder entitled "Visualization of trimmed Data with IGV"
-On NCBI, molecular location of gene NR2F2 at bp 96,328,518
+On NCBI, molecular location of gene NR2F2 at bp 96,328,518 (attached above under title molecular location of gene NR2F2 at bp 96,328,518)
 ```
 # Differential Expression for Trimmed Data
 ## Quantification
