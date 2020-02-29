@@ -257,7 +257,8 @@ we have 9 differentially expressed genes in the untrimmed data and 8 genes in tr
 in trimmed data is LARP6 (ENSG00000166173) which disappeared from the DEGs list in the trimmed data. LARP6 is highly
 expressed in the myoepithelial cells of the mammary gland and is upregulated in basal-like invasive ductal carcinomas 
 of the breast. Additionally we found that NR2F2 (ENSG00000185551) gene -target gene in study- is significantly upregulated
-in untrimmed data more than the trimmed data. For the other DEGs, we recognized that CHAC gene (ENSG00000128965), MAP1A (ENSG00000166963) gene which is a recognizable gene in breast cancer that resists chemotherapy, SNRPN (ENSG00000128739) 
+in untrimmed data more than the trimmed data. For the other DEGs, we recognized that CHAC gene (ENSG00000128965), MAP1A
+(ENSG00000166963) gene which is a recognizable gene in breast cancer that resists chemotherapy, SNRPN (ENSG00000128739) 
 gene and cytochrome oxidase P450 CYP450 gene (ENSG00000140465) are significantly upregulated in trimmed data more than 
 untrimmed data.On the other hand, actin binding gene TMOD2 (ENSG00000128872), GTBase activating protein (ENSG00000140575) gene
 which is an important marker for prognosis of breast cancer and ADAMTS7 (ENSG00000136378)	were upregulated in untrimmed data.
