@@ -36,6 +36,11 @@ for the code open READEME.md file in CODE folder CODE/README.md
 6. Annotation file of chromosome 15 "GFF3 format" 
 The links of SRA and ensembl are available in script 
 ```
+# Data Overview using Seqkit
+```
+Screenshot uploaded under title of Quick overveiw of Data
+```
+
 # QC for data before trimming
 ```
 we have checked the QC of all data we have downloaded (both the control and sample)
