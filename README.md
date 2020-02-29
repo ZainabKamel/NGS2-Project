@@ -261,5 +261,6 @@ in untrimmed data more than the trimmed data. For the other DEGs, we recognized 
 (ENSG00000166963) gene which is a recognizable gene in breast cancer that resists chemotherapy, SNRPN (ENSG00000128739) 
 gene and cytochrome oxidase P450 CYP450 gene (ENSG00000140465) are significantly upregulated in trimmed data more than 
 untrimmed data.On the other hand, actin binding gene TMOD2 (ENSG00000128872), GTBase activating protein (ENSG00000140575) gene
-which is an important marker for prognosis of breast cancer and ADAMTS7 (ENSG00000136378)	were upregulated in untrimmed data.
+which is an important marker for prognosis of breast cancer and ADAMTS7 (ENSG00000136378) were upregulated in untrimmed data.
+Also while observing the output files of quantification (simple_count.txt and simple_count_trimmed.txt), we found that the NR2F2 (ENSG00000185551) gene was downregulated in Samples when compared to the Control in both trimmed and untrimmed data+.
 ```
