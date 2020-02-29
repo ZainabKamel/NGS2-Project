@@ -247,5 +247,8 @@ ALL the fasta files of control and sample data upload to Nucleotide BLAST "BLAST
 ```
 After comparing the trimmed and untrimmed data resulting from the differential expression analysis, we found that we have 9 differentially expressed genes in the untrimmed data and 8 genes in trimmed data. The one missing gene in trimmed data is LARP6 (ENSG00000166173) which disappeared from the DEGs list in the trimmed data. LARP6 is highly expressed in the 
 myoepithelial cells of the mammary gland and is upregulated in basal-like invasive ductal carcinomas of the breast.
-Additionally we found that NR2F2 (ENSG00000185551) gene -target gene in study- is significantly upregulated in untrimmed data more than the trimmed data. For the other DEGs, we recognized that CHAC gene (ENSG00000128965) and CYP450 gene (ENSG00000140465) are significantly upregulated in trimmed data more than untrimmed data. On the other hand actin binding gene TMOD2 (ENSG00000128872) padj 
+Additionally we found that NR2F2 (ENSG00000185551) gene -target gene in study- is significantly upregulated in untrimmed 
+data more than the trimmed data. For the other DEGs, we recognized that CHAC gene (ENSG00000128965) and CYP450 gene
+(ENSG00000140465) are significantly upregulated in trimmed data more than untrimmed data. On the other hand actin binding
+gene TMOD2 (ENSG00000128872) padj 
 ```
