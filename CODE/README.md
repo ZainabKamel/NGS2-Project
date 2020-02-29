@@ -38,6 +38,14 @@ wget ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GR
 wget ftp://ftp.ensembl.org/pub/release-99/gff3/homo_sapiens/Homo_sapiens.GRCh38.99.chromosome.6.gff3.gz
 wget ftp://ftp.ensembl.org/pub/release-99/gff3/homo_sapiens/Homo_sapiens.GRCh38.99.chromosome.15.gff3.gz
 ```
+# Data Overview using SeqKit
+```
+seqkit stats hs_T47D_shCTRL_RNAseq_rep1.fastq.gz
+seqkit stats hs_T47D_shCTRL_RNAseq_rep2.fastq.gz
+seqkit stats hs_T47D_shNR2F2_RNAseq_rep1.fastq.gz
+seqkit stats hs_T47D_shNR2F2_RNAseq_rep2.fastq.gz
+```
+
 # Preparation of GTF file
 ```
 >> first we used genometools for conversion of gff to gtf #but unfortunately it showed at GTF2.2 version which only has transcript and exon ids
