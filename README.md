@@ -56,14 +56,17 @@ and overrepresented sequences
 # Hisat2 Alignment for untrimmedd data 
 ## Indexing 
 ```
-We first worked on chromosome 6, because we were tracking ESR-1 gene on chr 6 but after reviewing the main abstract of the study we figured out we need to work on chr 15 where NR2F2 is located. 
+We first worked on chromosome 6, because we were tracking ESR-1 gene on chr 6 but after reviewing the main abstract 
+of the study we figured out we need to work on chr 15 where NR2F2 is located. 
 
 preparation of annotation file of chromosome 6 from GFF3 to GTF 
-we used genometools first which shows a GTF2.2 having no gene id, only transcripts and gene id which wasn't specific for further feature count so we used gffreads tools after 
+we used genometools first which shows a GTF2.2 having no gene id, only transcripts and gene id which wasn't specific 
+for further feature count so we used gffreads tools after 
 ```
 ## Alignment 
 ```
-At first, we failed to work using for loop so we aligned each sample alone, but after solving the issue of for loop we reused it for conducting the resullts "viewd in details in issue number 11"
+At first, we failed to work using for loop so we aligned each sample alone, but after solving the issue of for loop 
+we reused it for conducting the resullts "viewd in details in issue number 11"
 
 we aligned data using Hisat2 and these were the output of the four files (two samples and two controls)
 The NR2F2 gene we are looking for appeared to be on Forward strand, that's why we focused on F in the command line 
@@ -105,7 +108,8 @@ The NR2F2 gene we are looking for appeared to be on Forward strand, that's why w
 ```
 # Visualization of untrimmed /*bam.bai files using IGV
 ```
-we visualized the bam and bam.bai files using IGV. These screenshots were attached in the folder entitled "Visualization of  Un-trimmed Data with IGV"
+we visualized the bam and bam.bai files using IGV. These screenshots were attached in the folder 
+entitled "Visualization of  Un-trimmed Data with IGV"
 
 ```
 # Differential Expression for untrimmed data
@@ -158,7 +162,8 @@ TrimmomaticSE: Completed successfully
 ```
 # QC for data after trimming
 ```
-we have checked the QC of all data we have downloaded (both the control and sample) after being trimmed by the previously mentioned method
+we have checked the QC of all data we have downloaded (both the control and sample) after being trimmed 
+by the previously mentioned method. 
 you can find the report uploaded for each control and sample file
 (ATTACHED ABOVE SCREENSHOT FOR EACH QC REPORT IN AFTER TRIMMING QC FILES)
 
@@ -212,8 +217,10 @@ trimmomatic is designed to be working with DNA data not RNA.
 ```
 # Visualization of trimmed /*bam /*bam.bai files using IGV
 ```
-we visualized the bam and bam.bai files using IGV. These screenshots were attached in the folder entitled "Visualization of trimmed Data with IGV"
-On NCBI, molecular location of gene NR2F2 at bp 96,328,518 (attached above under title "trimmed data molecular location of gene NR2F2 at bp 96,328,518")
+we visualized the bam and bam.bai files using IGV. These screenshots were attached in the folder entitled 
+"Visualization of trimmed Data with IGV"
+On NCBI, molecular location of gene NR2F2 at bp 96,328,518 (attached above under title "trimmed data molecular 
+location of gene NR2F2 at bp 96,328,518")
 ```
 # Differential Expression for Trimmed Data
 ## Quantification
@@ -245,7 +252,9 @@ ALL the fasta files of control and sample data upload to Nucleotide BLAST "BLAST
 ```
 # Conclusion 
 ```
-After comparing the trimmed and untrimmed data resulting from the differential expression analysis, we found that we have 9 differentially expressed genes in the untrimmed data and 8 genes in trimmed data. The one missing gene in trimmed data is LARP6 (ENSG00000166173) which disappeared from the DEGs list in the trimmed data. LARP6 is highly expressed in the 
+After comparing the trimmed and untrimmed data resulting from the differential expression analysis, we found that we have 9 
+differentially expressed genes in the untrimmed data and 8 genes in trimmed data. The one missing gene in trimmed data is LARP6
+(ENSG00000166173) which disappeared from the DEGs list in the trimmed data. LARP6 is highly expressed in the 
 myoepithelial cells of the mammary gland and is upregulated in basal-like invasive ductal carcinomas of the breast.
 Additionally we found that NR2F2 (ENSG00000185551) gene -target gene in study- is significantly upregulated in untrimmed 
 data more than the trimmed data. For the other DEGs, we recognized that CHAC gene (ENSG00000128965), MAP1A (ENSG00000166963) 
