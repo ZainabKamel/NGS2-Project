@@ -213,7 +213,7 @@ trimmomatic is designed to be working with DNA data not RNA.
 # Visualization of trimmed /*bam /*bam.bai files using IGV
 ```
 we visualized the bam and bam.bai files using IGV. These screenshots were attached in the folder entitled "Visualization of trimmed Data with IGV"
-On NCBI, molecular location of gene NR2F2 at bp 96,328,518 (attached above under title molecular location of gene NR2F2 at bp 96,328,518)
+On NCBI, molecular location of gene NR2F2 at bp 96,328,518 (attached above under title "trimmed data molecular location of gene NR2F2 at bp 96,328,518")
 ```
 # Differential Expression for Trimmed Data
 ## Quantification
@@ -237,10 +237,12 @@ On NCBI, molecular location of gene NR2F2 at bp 96,328,518 (attached above under
 |ENSG00000128965|172.07940920188|68.8166455576957|275.342172846064|4.00109843504677|2.00039612231184|1.40728755710827e-10| 9.39729003690993e-61 | 
 |ENSG00000140465|643.314371739867|235.846844998906|1050.78189848083|4.4553570283533|2.15554104620201|1.98829913800446e-09| 9.09315472447373e-07| 
 |ENSG00000128739|123.742965127761|48.4703182427844|199.015612012738|4.10592748774379|2.03770814912304|4.77544375341107e-10| 2.27470304120814e-07| 
-```
 
 # Extra NCBI BLAST
 ```
 According to the issue 15 we decided to align our samples to NCBI BLAST database 
 ALL the fasta files of control and sample data upload to Nucleotide BLAST "BLASTn" by using nr/nt database with specification of organism to "Homo Sapiens"
 ```
+# Conclusion 
+```
+
